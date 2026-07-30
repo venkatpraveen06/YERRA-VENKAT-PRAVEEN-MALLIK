@@ -1,0 +1,118 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bg-grad1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0F172A" />
+      <stop offset="100%" stop-color="#1E293B" />
+    </linearGradient>
+    <linearGradient id="blue-grad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#2563EB" />
+      <stop offset="100%" stop-color="#3B82F6" />
+    </linearGradient>
+    <linearGradient id="accent-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#10B981" />
+      <stop offset="100%" stop-color="#059669" />
+    </linearGradient>
+    <filter id="shadow" x="-5%" y="-5%" width="110%" height="110%">
+      <feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#000000" flood-opacity="0.25" />
+    </filter>
+  </defs>
+  <!-- Background Container -->
+  <rect width="800" height="500" rx="16" fill="url(#bg-grad1)" />
+  
+  <!-- Subtle Grid Pattern -->
+  <g stroke="#ffffff" stroke-opacity="0.04" stroke-width="1">
+    <path d="M0 50 H800 M0 100 H800 M0 150 H800 M0 200 H800 M0 250 H800 M0 300 H800 M0 350 H800 M0 400 H800 M0 450 H800" />
+    <path d="M100 0 V500 M200 0 V500 M300 0 V500 M400 0 V500 M500 0 V500 M600 0 V500 M700 0 V500" />
+  </g>
+
+  <!-- Main Dashboard Window Mockup -->
+  <g filter="url(#shadow)">
+    <!-- Window Frame -->
+    <rect x="50" y="40" width="700" height="420" rx="12" fill="#FFFFFF" />
+    <path d="M50 40 h700 v40 h-700 z" fill="#F8FAFC" rx="12" />
+    <!-- Window Dots -->
+    <circle cx="75" cy="60" r="5" fill="#EF4444" />
+    <circle cx="92" cy="60" r="5" fill="#F59E0B" />
+    <circle cx="109" cy="60" r="5" fill="#10B981" />
+    <!-- Search / Bar -->
+    <rect x="140" y="50" width="300" height="20" rx="6" fill="#E2E8F0" />
+    <text x="150" y="64" font-family="sans-serif" font-size="11" fill="#64748B">restaurantos.ai/dashboard</text>
+
+    <!-- Sidebar -->
+    <rect x="50" y="80" width="160" height="380" fill="#0F172A" />
+    <!-- Sidebar Logo -->
+    <rect x="70" y="100" width="24" height="24" rx="6" fill="#2563EB" />
+    <text x="104" y="117" font-family="sans-serif" font-weight="bold" font-size="14" fill="#FFFFFF">RestaurantOS</text>
+    
+    <!-- Sidebar Nav Items -->
+    <rect x="62" y="145" width="136" height="32" rx="6" fill="#2563EB" />
+    <text x="94" y="166" font-family="sans-serif" font-size="12" font-weight="600" fill="#FFFFFF"> Live Orders</text>
+    <text x="94" y="206" font-family="sans-serif" font-size="12" fill="#94A3B8"> Kitchen Display</text>
+    <text x="94" y="246" font-family="sans-serif" font-size="12" fill="#94A3B8"> QR Menu Setup</text>
+    <text x="94" y="286" font-family="sans-serif" font-size="12" fill="#94A3B8"> WhatsApp Bot</text>
+    <text x="94" y="326" font-family="sans-serif" font-size="12" fill="#94A3B8"> Analytics &amp; AI</text>
+
+    <!-- Main Content Area -->
+    <!-- Top Stat Cards -->
+    <g transform="translate(230, 100)">
+      <!-- Stat 1 -->
+      <rect x="0" y="0" width="145" height="70" rx="8" fill="#F8FAFC" stroke="#E2E8F0" />
+      <text x="12" y="24" font-family="sans-serif" font-size="11" fill="#64748B">Today's Revenue</text>
+      <text x="12" y="50" font-family="sans-serif" font-size="18" font-weight="bold" fill="#0F172A">$3,840.50</text>
+      <rect x="100" y="14" width="34" height="16" rx="4" fill="#DCFCE7" />
+      <text x="105" y="26" font-family="sans-serif" font-size="10" font-weight="bold" fill="#166534">+18%</text>
+
+      <!-- Stat 2 -->
+      <rect x="160" y="0" width="145" height="70" rx="8" fill="#F8FAFC" stroke="#E2E8F0" />
+      <text x="172" y="24" font-family="sans-serif" font-size="11" fill="#64748B">Active Orders</text>
+      <text x="172" y="50" font-family="sans-serif" font-size="18" font-weight="bold" fill="#2563EB">24 Live</text>
+      
+      <!-- Stat 3 -->
+      <rect x="320" y="0" width="180" height="70" rx="8" fill="#F8FAFC" stroke="#E2E8F0" />
+      <text x="332" y="24" font-family="sans-serif" font-size="11" fill="#64748B">WhatsApp Bot Orders</text>
+      <text x="332" y="50" font-family="sans-serif" font-size="18" font-weight="bold" fill="#10B981">142 Completed</text>
+    </g>
+
+    <!-- Orders Table / Feed Mockup -->
+    <g transform="translate(230, 190)">
+      <rect x="0" y="0" width="500" height="250" rx="8" fill="#FFFFFF" stroke="#E2E8F0" />
+      <!-- Table Header -->
+      <rect x="0" y="0" width="500" height="35" rx="8" fill="#F1F5F9" />
+      <text x="15" y="22" font-family="sans-serif" font-size="11" font-weight="bold" fill="#475569">ORDER ID</text>
+      <text x="100" y="22" font-family="sans-serif" font-size="11" font-weight="bold" fill="#475569">ITEMS</text>
+      <text x="260" y="22" font-family="sans-serif" font-size="11" font-weight="bold" fill="#475569">TABLE / SOURCE</text>
+      <text x="380" y="22" font-family="sans-serif" font-size="11" font-weight="bold" fill="#475569">STATUS</text>
+
+      <!-- Row 1 -->
+      <text x="15" y="60" font-family="sans-serif" font-size="11" font-weight="600" fill="#0F172A">#ORD-9082</text>
+      <text x="100" y="60" font-family="sans-serif" font-size="11" fill="#334155">2x Wagyu Burger, 1x Truffle Fries</text>
+      <text x="260" y="60" font-family="sans-serif" font-size="11" fill="#334155">Table #04 (QR)</text>
+      <rect x="380" y="47" width="80" height="20" rx="10" fill="#DBEAFE" />
+      <text x="395" y="61" font-family="sans-serif" font-size="10" font-weight="bold" fill="#1D4ED8">Preparing</text>
+      <line x1="15" y1="80" x2="485" y2="80" stroke="#F1F5F9" stroke-width="1" />
+
+      <!-- Row 2 -->
+      <text x="15" y="105" font-family="sans-serif" font-size="11" font-weight="600" fill="#0F172A">#ORD-9081</text>
+      <text x="100" y="105" font-family="sans-serif" font-size="11" fill="#334155">1x Seafood Pasta, 2x Iced Tea</text>
+      <text x="260" y="105" font-family="sans-serif" font-size="11" fill="#10B981">WhatsApp AI</text>
+      <rect x="380" y="92" width="80" height="20" rx="10" fill="#DCFCE7" />
+      <text x="403" y="106" font-family="sans-serif" font-size="10" font-weight="bold" fill="#15803D">Ready</text>
+      <line x1="15" y1="125" x2="485" y2="125" stroke="#F1F5F9" stroke-width="1" />
+
+      <!-- Row 3 -->
+      <text x="15" y="150" font-family="sans-serif" font-size="11" font-weight="600" fill="#0F172A">#ORD-9080</text>
+      <text x="100" y="150" font-family="sans-serif" font-size="11" fill="#334155">4x Pepperoni Pizza, 4x Soda</text>
+      <text x="260" y="150" font-family="sans-serif" font-size="11" fill="#334155">Table #12 (QR)</text>
+      <rect x="380" y="137" width="80" height="20" rx="10" fill="#FEF3C7" />
+      <text x="396" y="151" font-family="sans-serif" font-size="10" font-weight="bold" fill="#B45309">In Kitchen</text>
+      <line x1="15" y1="170" x2="485" y2="170" stroke="#F1F5F9" stroke-width="1" />
+
+      <!-- Row 4 -->
+      <text x="15" y="195" font-family="sans-serif" font-size="11" font-weight="600" fill="#0F172A">#ORD-9079</text>
+      <text x="100" y="195" font-family="sans-serif" font-size="11" fill="#334155">1x Chef Special Steak</text>
+      <text x="260" y="195" font-family="sans-serif" font-size="11" fill="#10B981">WhatsApp AI</text>
+      <rect x="380" y="182" width="80" height="20" rx="10" fill="#DCFCE7" />
+      <text x="398" y="196" font-family="sans-serif" font-size="10" font-weight="bold" fill="#15803D">Delivered</text>
+    </g>
+  </g>
+</svg>

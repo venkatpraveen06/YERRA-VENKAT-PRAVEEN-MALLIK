@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bg-grad3" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#4F46E5" />
+      <stop offset="100%" stop-color="#0F172A" />
+    </linearGradient>
+    <filter id="shadow3" x="-5%" y="-5%" width="110%" height="110%">
+      <feDropShadow dx="0" dy="8" stdDeviation="12" flood-color="#000000" flood-opacity="0.2" />
+    </filter>
+  </defs>
+  <rect width="800" height="500" rx="16" fill="url(#bg-grad3)" />
+  <g stroke="#ffffff" stroke-opacity="0.05" stroke-width="1">
+    <path d="M0 50 H800 M0 100 H800 M0 150 H800 M0 200 H800 M0 250 H800 M0 300 H800 M0 350 H800 M0 400 H800 M0 450 H800" />
+    <path d="M100 0 V500 M200 0 V500 M300 0 V500 M400 0 V500 M500 0 V500 M600 0 V500 M700 0 V500" />
+  </g>
+
+  <!-- Mockup Container -->
+  <g filter="url(#shadow3)">
+    <rect x="50" y="40" width="700" height="420" rx="12" fill="#FFFFFF" />
+    <!-- Header -->
+    <rect x="50" y="40" width="700" height="45" rx="12" fill="#4F46E5" />
+    <circle cx="75" cy="62" r="5" fill="#EF4444" />
+    <circle cx="92" cy="62" r="5" fill="#F59E0B" />
+    <circle cx="109" cy="62" r="5" fill="#10B981" />
+    <text x="135" y="67" font-family="sans-serif" font-weight="bold" font-size="15" fill="#FFFFFF">🎓 Ramanujan Academy Portal</text>
+    
+    <!-- Hero Banner inside app -->
+    <rect x="80" y="100" width="640" height="90" rx="8" fill="#EEF2FF" />
+    <text x="105" y="132" font-family="sans-serif" font-size="18" font-weight="bold" fill="#3730A3">Welcome back, Student Portal</text>
+    <text x="105" y="155" font-family="sans-serif" font-size="12" fill="#4F46E5">4 Active Courses • Attendance: 96.4% • Fee Status: Paid</text>
+
+    <!-- 3 Course Cards -->
+    <g transform="translate(80, 210)">
+      <!-- Card 1 -->
+      <rect x="0" y="0" width="195" height="220" rx="8" fill="#FFFFFF" stroke="#E2E8F0" />
+      <rect x="0" y="0" width="195" height="80" rx="8" fill="#818CF8" />
+      <text x="15" y="45" font-family="sans-serif" font-weight="bold" font-size="14" fill="#FFFFFF">Advanced Calculus</text>
+      <text x="15" y="62" font-family="sans-serif" font-size="11" fill="#E0E7FF">MATH-401</text>
+      <text x="15" y="110" font-family="sans-serif" font-size="11" fill="#64748B">Instructor: Prof. Raman</text>
+      <rect x="15" y="130" width="165" height="8" rx="4" fill="#E2E8F0" />
+      <rect x="15" y="130" width="140" height="8" rx="4" fill="#4F46E5" />
+      <text x="15" y="160" font-family="sans-serif" font-size="11" font-weight="bold" fill="#4F46E5">85% Complete</text>
+      <rect x="15" y="175" width="165" height="30" rx="6" fill="#4F46E5" />
+      <text x="65" y="194" font-family="sans-serif" font-size="11" font-weight="bold" fill="#FFFFFF">View Class</text>
+
+      <!-- Card 2 -->
+      <rect x="220" y="0" width="195" height="220" rx="8" fill="#FFFFFF" stroke="#E2E8F0" />
+      <rect x="220" y="0" width="195" height="80" rx="8" fill="#34D399" />
+      <text x="235" y="45" font-family="sans-serif" font-weight="bold" font-size="14" fill="#FFFFFF">Data Structures</text>
+      <text x="235" y="62" font-family="sans-serif" font-size="11" fill="#ECFDF5">CS-202</text>
+      <text x="235" y="110" font-family="sans-serif" font-size="11" fill="#64748B">Instructor: Dr. Sharma</text>
+      <rect x="235" y="130" width="165" height="8" rx="4" fill="#E2E8F0" />
+      <rect x="235" y="130" width="150" height="8" rx="4" fill="#059669" />
+      <text x="235" y="160" font-family="sans-serif" font-size="11" font-weight="bold" fill="#059669">92% Complete</text>
+      <rect x="235" y="175" width="165" height="30" rx="6" fill="#059669" />
+      <text x="285" y="194" font-family="sans-serif" font-size="11" font-weight="bold" fill="#FFFFFF">View Class</text>
+
+      <!-- Card 3 -->
+      <rect x="440" y="0" width="200" height="220" rx="8" fill="#FFFFFF" stroke="#E2E8F0" />
+      <rect x="440" y="0" width="200" height="80" rx="8" fill="#F43F5E" />
+      <text x="455" y="45" font-family="sans-serif" font-weight="bold" font-size="14" fill="#FFFFFF">Quantum Physics</text>
+      <text x="455" y="62" font-family="sans-serif" font-size="11" fill="#FFE4E6">PHY-305</text>
+      <text x="455" y="110" font-family="sans-serif" font-size="11" fill="#64748B">Instructor: Dr. Bose</text>
+      <rect x="455" y="130" width="170" height="8" rx="4" fill="#E2E8F0" />
+      <rect x="455" y="130" width="110" height="8" rx="4" fill="#E11D48" />
+      <text x="455" y="160" font-family="sans-serif" font-size="11" font-weight="bold" fill="#E11D48">65% Complete</text>
+      <rect x="455" y="175" width="170" height="30" rx="6" fill="#E11D48" />
+      <text x="505" y="194" font-family="sans-serif" font-size="11" font-weight="bold" fill="#FFFFFF">View Class</text>
+    </g>
+  </g>
+</svg>

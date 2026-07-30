@@ -1,0 +1,970 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Venkat Praveen — Full Stack Developer & AI Automation Engineer</title>
+  <meta name="description"
+    content="Portfolio of Venkat Praveen — Full Stack Developer & AI Automation Engineer specializing in modern web applications, dashboards, AI workflows, and custom enterprise software.">
+  <meta name="keywords"
+    content="Venkat Praveen, Full Stack Developer, AI Automation Engineer, FastAPI, Python, JavaScript, HTML5, CSS3, PostgreSQL, n8n, Gemini AI">
+  <meta name="author" content="Venkat Praveen">
+
+  <!-- OpenGraph SEO -->
+  <meta property="og:title" content="Venkat Praveen — Full Stack Developer & AI Automation Engineer">
+  <meta property="og:description"
+    content="I build modern websites, dashboards, AI automation systems, and scalable web applications that help businesses deliver better digital experiences.">
+  <meta property="og:type" content="website">
+
+  <!-- Google Fonts: Plus Jakarta Sans & Fira Code -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
+    rel="stylesheet">
+
+  <!-- FontAwesome 6 for Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body>
+
+  <!-- ==================== STICKY NAVIGATION ==================== -->
+  <header class="navbar">
+    <div class="container nav-container">
+      <!-- Brand Logo -->
+      <a href="#home" class="nav-brand">
+        <span class="nav-brand-dot"></span>
+        Venkat Praveen
+      </a>
+
+      <!-- Center Links -->
+      <ul class="nav-menu">
+        <li><a href="#home" class="nav-link active">Home</a></li>
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#projects" class="nav-link">Projects</a></li>
+        <li><a href="#skills" class="nav-link">Skills</a></li>
+        <li><a href="#services" class="nav-link">Services</a></li>
+        <li><a href="#experience" class="nav-link">Experience</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+      </ul>
+
+      <!-- Right CTA -->
+      <div class="nav-cta">
+        <a href="#contact" class="btn btn-primary btn-sm">
+          <i class="fas fa-file-download"></i> Download Resume
+        </a>
+        <button class="menu-toggle" aria-label="Toggle Navigation Menu">
+          <i class="fas fa-bars fa-lg"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ==================== HERO SECTION ==================== -->
+  <section id="home" class="hero">
+    <div class="container hero-grid">
+      <!-- Left Hero Text -->
+      <div class="hero-content fade-in-up">
+        <div class="hero-badge">
+          <span class="status-dot"></span>
+          Full Stack Developer &amp; AI Automation Engineer
+        </div>
+
+        <h1 class="hero-title">
+          Hi, I'm
+          <span class="name-highlight">Venkat Praveen</span>
+        </h1>
+
+        <p class="hero-description">
+          I build modern websites, dashboards, AI automation systems, and scalable web applications that help businesses
+          improve productivity and deliver better digital experiences.
+        </p>
+
+        <div class="hero-actions">
+          <a href="#projects" class="btn btn-primary">
+            <i class="fas fa-arrow-right"></i> View My Work
+          </a>
+          <a href="#contact" class="btn btn-secondary">
+            <i class="fas fa-envelope"></i> Contact Me
+          </a>
+        </div>
+
+        <!-- Quick Stats Grid -->
+        <div class="quick-stats">
+          <div class="stat-item">
+            <span class="stat-number" data-target="6" data-suffix="+">0</span>
+            <span class="stat-label">Projects</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-number" data-target="100" data-suffix="%">0</span>
+            <span class="stat-label">Responsive</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-number" data-target="1" data-prefix="AI" data-suffix="">AI</span>
+            <span class="stat-label">Automation</span>
+          </div>
+          <div class="stat-item">
+            <span class="stat-number" data-target="1" data-prefix="Fast" data-suffix="">Fast</span>
+            <span class="stat-label">Development</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right Custom HTML/CSS Handcrafted Coding Illustration -->
+      <div class="hero-visual fade-in-up">
+        <div class="workspace-container">
+          <!-- Floating Tech Tags -->
+          <div class="floating-badge badge-html">&lt;HTML5&gt;</div>
+          <div class="floating-badge badge-css">.CSS3 {}</div>
+          <div class="floating-badge badge-js">JS()</div>
+          <div class="floating-badge badge-python">def python():</div>
+          <div class="floating-badge badge-fastapi">FastAPI</div>
+          <div class="floating-badge badge-github">git commit</div>
+
+          <!-- Laptop Mockup -->
+          <div class="laptop-mockup">
+            <div class="laptop-camera"></div>
+            <div class="screen-display">
+              <div class="editor-header">
+                <span class="editor-dot dot-red"></span>
+                <span class="editor-dot dot-yellow"></span>
+                <span class="editor-dot dot-green"></span>
+                <span class="editor-title">main.py — FastAPI AI Agent</span>
+              </div>
+              <div class="code-lines">
+                <div><span class="c-kw">from</span> fastapi <span class="c-kw">import</span> FastAPI, Depends</div>
+                <div><span class="c-kw">from</span> ai_agent <span class="c-kw">import</span> GeminiBot</div>
+                <br>
+                <div>app = <span class="c-fn">FastAPI</span>(title=<span class="c-str">"BusinessFlow"</span>)</div>
+                <div>agent = <span class="c-fn">GeminiBot</span>()</div>
+                <br>
+                <div><span class="c-cm"># Auto qualify inbound leads</span></div>
+                <div><span class="c-kw">@app.post</span>(<span class="c-str">"/api/v1/lead"</span>)</div>
+                <div><span class="c-kw">async def</span> <span class="c-fn">handle_lead</span>(payload: dict):</div>
+                <div>&nbsp;&nbsp;res = <span class="c-kw">await</span> agent.<span class="c-fn">analyze</span>(payload)
+                </div>
+                <div>&nbsp;&nbsp;<span class="c-kw">return</span> {<span class="c-str">"status"</span>: <span
+                    class="c-str">"qualified"</span>, <span class="c-str">"data"</span>: res}</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Laptop Base -->
+          <div class="laptop-base">
+            <div class="laptop-notch"></div>
+          </div>
+
+          <!-- Workspace Desk & Items -->
+          <div class="desk-surface"></div>
+
+          <!-- Coffee Cup -->
+          <div class="coffee-cup">
+            <div class="coffee-handle"></div>
+            <div class="coffee-steam"></div>
+          </div>
+
+          <!-- Sticky Note -->
+          <div class="sticky-note">
+            // TODO:<br>
+            n8n workflow<br>
+            PostgreSQL DB<br>
+            Deploy Vercel
+          </div>
+
+          <!-- Desk Plant -->
+          <div class="desk-plant">
+            <div class="plant-leaf"></div>
+            <div class="plant-leaf-2"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== ABOUT SECTION ==================== -->
+  <section id="about" class="about">
+    <div class="container">
+      <div class="section-header fade-in-up">
+        <span class="section-badge"><i class="fas fa-user-check"></i> About Me</span>
+        <h2 class="section-title">Engineered for Scalability, Built with Purpose</h2>
+        <p class="section-subtitle">A senior approach to full-stack application design and automated intelligence.</p>
+      </div>
+
+      <div class="about-grid">
+        <!-- About Narrative & Photo Grid -->
+        <div class="about-card-primary fade-in-up">
+          <div class="about-profile-header">
+            <div class="profile-img-wrapper">
+              <img src="images/profile.jpg" alt="Venkat Praveen" class="profile-avatar-lg">
+              <span class="status-indicator" title="Available for projects"></span>
+            </div>
+            <div>
+              <h3 class="profile-name-title">Yerra Venkat Praveen</h3>
+              <span class="about-highlight-box" style="margin-bottom: 0;">
+                <i class="fas fa-code-branch"></i> Full Stack &amp; AI Engineer
+              </span>
+            </div>
+          </div>
+
+          <p class="about-text" style="margin-top: 20px;">
+            I am <strong>Yerra Venkat Praveen</strong>, a Full Stack Developer and AI Automation Engineer passionate
+            about building modern web applications, robust backends, and autonomous workflows.
+          </p>
+          <p class="about-text">
+            My work centers around solving real business bottlenecks—whether that's streamlining restaurant operations
+            with QR ordering, building HIPAA-ready hospital management software, or creating AI agents that auto-qualify
+            inbound sales leads.
+          </p>
+          <p class="about-text">
+            I believe software should be clean, scalable, fast, and human-centric. By combining modern web standards
+            with AI tools like Gemini and n8n, I deliver high-impact digital products.
+          </p>
+        </div>
+
+        <!-- Right Pillars Grid -->
+        <div class="about-pillars fade-in-up">
+          <div class="pillar-item">
+            <div class="pillar-icon"><i class="fas fa-layer-group"></i></div>
+            <h4 class="pillar-title">Clean Architecture</h4>
+            <p class="pillar-desc">Maintainable, modular codebases adhering to strict design patterns and accessibility
+              standards.</p>
+          </div>
+
+          <div class="pillar-item">
+            <div class="pillar-icon"><i class="fas fa-robot"></i></div>
+            <h4 class="pillar-title">AI Automation</h4>
+            <p class="pillar-desc">Integrating LLM agents, Gemini APIs, and n8n workflows to eliminate repetitive
+              business manual labor.</p>
+          </div>
+
+          <div class="pillar-item">
+            <div class="pillar-icon"><i class="fas fa-chart-line"></i></div>
+            <h4 class="pillar-title">Business Value First</h4>
+            <p class="pillar-desc">Every feature, query, and pixel is crafted to increase conversions, efficiency, and
+              revenue.</p>
+          </div>
+
+          <div class="pillar-item">
+            <div class="pillar-icon"><i class="fas fa-shield-alt"></i></div>
+            <h4 class="pillar-title">Scalable &amp; Secure</h4>
+            <p class="pillar-desc">Hardened REST APIs, optimized SQL schemas, and zero-trust data validation policies.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== SKILLS SECTION ==================== -->
+  <section id="skills" class="skills">
+    <div class="container">
+      <div class="section-header fade-in-up">
+        <span class="section-badge"><i class="fas fa-tools"></i> Technical Expertise</span>
+        <h2 class="section-title">Modern Stack &amp; Enterprise Tools</h2>
+        <p class="section-subtitle">Carefully selected technologies for high performance, reliability, and automated
+          intelligence.</p>
+      </div>
+
+      <div class="skills-grid">
+        <!-- Frontend -->
+        <div class="skill-category-card fade-in-up">
+          <div class="category-header">
+            <div class="category-icon"><i class="fas fa-desktop"></i></div>
+            <h3 class="category-title">Frontend</h3>
+          </div>
+          <div class="skills-tags">
+            <span class="skill-tag"><i class="fab fa-html5" style="color: #E44D26;"></i> HTML5</span>
+            <span class="skill-tag"><i class="fab fa-css3-alt" style="color: #264DE4;"></i> CSS3</span>
+            <span class="skill-tag"><i class="fab fa-js-square" style="color: #F7DF1E;"></i> JavaScript (ES6+)</span>
+            <span class="skill-tag"><i class="fas fa-mobile-alt"></i> Responsive Layouts</span>
+            <span class="skill-tag"><i class="fas fa-universal-access"></i> Web Accessibility (a11y)</span>
+          </div>
+        </div>
+
+        <!-- Backend -->
+        <div class="skill-category-card fade-in-up">
+          <div class="category-header">
+            <div class="category-icon"><i class="fas fa-server"></i></div>
+            <h3 class="category-title">Backend &amp; Databases</h3>
+          </div>
+          <div class="skills-tags">
+            <span class="skill-tag"><i class="fab fa-python" style="color: #3776AB;"></i> Python</span>
+            <span class="skill-tag"><i class="fas fa-bolt" style="color: #009688;"></i> FastAPI</span>
+            <span class="skill-tag"><i class="fas fa-network-wired"></i> REST APIs</span>
+            <span class="skill-tag"><i class="fas fa-database" style="color: #336791;"></i> PostgreSQL</span>
+            <span class="skill-tag"><i class="fas fa-database" style="color: #003B57;"></i> SQLite</span>
+            <span class="skill-tag"><i class="fas fa-bolt" style="color: #3ECF8E;"></i> Supabase</span>
+          </div>
+        </div>
+
+        <!-- Automation -->
+        <div class="skill-category-card fade-in-up">
+          <div class="category-header">
+            <div class="category-icon"><i class="fas fa-cogs"></i></div>
+            <h3 class="category-title">Automation</h3>
+          </div>
+          <div class="skills-tags">
+            <span class="skill-tag"><i class="fas fa-project-diagram" style="color: #FF6584;"></i> n8n Workflows</span>
+            <span class="skill-tag"><i class="fab fa-whatsapp" style="color: #25D366;"></i> WhatsApp API</span>
+            <span class="skill-tag"><i class="fas fa-plug"></i> API Integration</span>
+            <span class="skill-tag"><i class="fas fa-sync-alt"></i> Webhooks</span>
+            <span class="skill-tag"><i class="fas fa-tasks"></i> Task Scheduling</span>
+          </div>
+        </div>
+
+        <!-- Artificial Intelligence -->
+        <div class="skill-category-card fade-in-up">
+          <div class="category-header">
+            <div class="category-icon"><i class="fas fa-brain"></i></div>
+            <h3 class="category-title">Artificial Intelligence</h3>
+          </div>
+          <div class="skills-tags">
+            <span class="skill-tag"><i class="fas fa-sparkles" style="color: #2563EB;"></i> Gemini API</span>
+            <span class="skill-tag"><i class="fas fa-terminal"></i> Prompt Engineering</span>
+            <span class="skill-tag"><i class="fas fa-robot"></i> AI Agents</span>
+            <span class="skill-tag"><i class="fas fa-comments"></i> Conversational AI</span>
+            <span class="skill-tag"><i class="fas fa-database"></i> Vector RAG Workflows</span>
+          </div>
+        </div>
+
+        <!-- Developer Tools -->
+        <div class="skill-category-card fade-in-up">
+          <div class="category-header">
+            <div class="category-icon"><i class="fas fa-wrench"></i></div>
+            <h3 class="category-title">Tools &amp; Cloud</h3>
+          </div>
+          <div class="skills-tags">
+            <span class="skill-tag"><i class="fab fa-git-alt" style="color: #F05032;"></i> Git</span>
+            <span class="skill-tag"><i class="fab fa-github"></i> GitHub</span>
+            <span class="skill-tag"><i class="fab fa-docker" style="color: #2496ED;"></i> Docker</span>
+            <span class="skill-tag"><i class="fas fa-cloud"></i> Render</span>
+            <span class="skill-tag"><i class="fas fa-globe"></i> Vercel</span>
+          </div>
+        </div>
+
+        <!-- Architecture & Methodologies -->
+        <div class="skill-category-card fade-in-up">
+          <div class="category-header">
+            <div class="category-icon"><i class="fas fa-code"></i></div>
+            <h3 class="category-title">Engineering Standards</h3>
+          </div>
+          <div class="skills-tags">
+            <span class="skill-tag"><i class="fas fa-check"></i> Modular Architecture</span>
+            <span class="skill-tag"><i class="fas fa-shield-virus"></i> Security Best Practices</span>
+            <span class="skill-tag"><i class="fas fa-tachometer-alt"></i> Performance Audit</span>
+            <span class="skill-tag"><i class="fas fa-search"></i> Technical SEO</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== SERVICES SECTION ==================== -->
+  <section id="services" class="services">
+    <div class="container">
+      <div class="section-header fade-in-up">
+        <span class="section-badge"><i class="fas fa-concierge-bell"></i> What I Offer</span>
+        <h2 class="section-title">Specialized Services for Modern Businesses</h2>
+        <p class="section-subtitle">Tailored digital solutions designed to increase efficiency, automate operations, and
+          boost client revenue.</p>
+      </div>
+
+      <div class="services-grid">
+        <!-- 1. Website Development -->
+        <div class="service-card fade-in-up">
+          <div class="service-icon"><i class="fas fa-laptop-code"></i></div>
+          <h3 class="service-title">Website Development</h3>
+          <p class="service-desc">Custom high-performance websites built with semantic HTML5, modern CSS3, and vanilla
+            JS. Optimized for Lighthouse, mobile responsiveness, and high conversion rates.</p>
+          <ul class="service-features">
+            <li class="service-feature-item"><i class="fas fa-check"></i> Fast Page Speed (&lt;1s load)</li>
+            <li class="service-feature-item"><i class="fas fa-check"></i> Pixel-Perfect Responsive Design</li>
+            <li class="service-feature-item"><i class="fas fa-check"></i> SEO &amp; Accessibility Built-in</li>
+          </ul>
+        </div>
+
+        <!-- 2. Dashboard Development -->
+        <div class="service-card fade-in-up">
+          <div class="service-icon"><i class="fas fa-chart-pie"></i></div>
+          <h3 class="service-title">Dashboard Development</h3>
+          <p class="service-desc">Intuitive, data-rich admin and operational web dashboards for monitoring business
+            metrics, user permissions, analytics, and real-time operational feeds.</p>
+          <ul class="service-features">
+            <li class="service-feature-item"><i class="fas fa-check"></i> Real-time WebSockets &amp; Metrics</li>
+            <li class="service-feature-item"><i class="fas fa-check"></i> Role-Based Access Controls</li>
+            <li class="service-feature-item"><i class="fas fa-check"></i> Data Export &amp; Custom Filters</li>
+          </ul>
+        </div>
+
+        <!-- 3. Business Automation -->
+        <div class="service-card fade-in-up">
+          <div class="service-icon"><i class="fas fa-robot"></i></div>
+          <h3 class="service-title">Business Automation</h3>
+          <p class="service-desc">End-to-end process automation utilizing n8n, Gemini AI agents, and WhatsApp API to
+            handle lead qualification, customer notifications, and dataset syncing.</p>
+          <ul class="service-features">
+            <li class="service-feature-item"><i class="fas fa-check"></i> Automated WhatsApp Chatbots</li>
+            <li class="service-feature-item"><i class="fas fa-check"></i> Multi-App n8n Pipeline Workflows</li>
+            <li class="service-feature-item"><i class="fas fa-check"></i> AI Lead Qualification &amp; CRM Sync</li>
+          </ul>
+        </div>
+
+        <!-- 4. Restaurant Digital Solutions -->
+        <div class="service-card fade-in-up">
+          <div class="service-icon"><i class="fas fa-utensils"></i></div>
+          <h3 class="service-title">Restaurant Digital Solutions</h3>
+          <p class="service-desc">Complete restaurant operating technology—including contactless QR code menus, instant
+            WhatsApp ordering systems, and live kitchen display screens.</p>
+          <ul class="service-features">
+            <li class="service-feature-item"><i class="fas fa-check"></i> QR Contactless Menu &amp; Ordering</li>
+            <li class="service-feature-item"><i class="fas fa-check"></i> Live Kitchen Display System (KDS)</li>
+            <li class="service-feature-item"><i class="fas fa-check"></i> Automated Receipts via WhatsApp</li>
+          </ul>
+        </div>
+
+        <!-- 5. Hospital Systems -->
+        <div class="service-card fade-in-up">
+          <div class="service-icon"><i class="fas fa-hospital"></i></div>
+          <h3 class="service-title">Hospital Systems</h3>
+          <p class="service-desc">Secure healthcare management platforms for patient recordkeeping, doctor scheduling,
+            queue management, lab reports, and administrative oversight.</p>
+          <ul class="service-features">
+            <li class="service-feature-item"><i class="fas fa-check"></i> Patient EHR &amp; Appointment Queue</li>
+            <li class="service-feature-item"><i class="fas fa-check"></i> Doctor &amp; Staff Scheduling</li>
+            <li class="service-feature-item"><i class="fas fa-check"></i> Secure Billing &amp; Lab Reporting</li>
+          </ul>
+        </div>
+
+        <!-- 6. Custom Software Development -->
+        <div class="service-card fade-in-up">
+          <div class="service-icon"><i class="fas fa-cogs"></i></div>
+          <h3 class="service-title">Custom Software Development</h3>
+          <p class="service-desc">Bespoke full-stack web applications engineered with FastAPI, Python, and PostgreSQL
+            tailored to unique business workflow requirements.</p>
+          <ul class="service-features">
+            <li class="service-feature-item"><i class="fas fa-check"></i> Custom REST API Engineering</li>
+            <li class="service-feature-item"><i class="fas fa-check"></i> Database Modeling &amp; Migration</li>
+            <li class="service-feature-item"><i class="fas fa-check"></i> Scalable Dockerized Deployment</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== PROJECTS SECTION ==================== -->
+  <section id="projects" class="projects">
+    <div class="container">
+      <div class="section-header fade-in-up">
+        <span class="section-badge"><i class="fas fa-briefcase"></i> Featured Work</span>
+        <h2 class="section-title">Six Handcrafted Enterprise Projects</h2>
+        <p class="section-subtitle">Real-world applications built to demonstrate technical depth, architectural clarity,
+          and AI integration.</p>
+      </div>
+
+      <div class="projects-grid">
+        <!-- Project 1: RestaurantOS -->
+        <div class="project-card fade-in-up">
+          <div class="project-preview">
+            <img src="images/restaurantos.jpg" alt="RestaurantOS Preview" class="project-img">
+          </div>
+          <div class="project-content">
+            <div class="project-tech-badges">
+              <span class="tech-badge">HTML</span>
+              <span class="tech-badge">CSS</span>
+              <span class="tech-badge">JavaScript</span>
+              <span class="tech-badge">FastAPI</span>
+              <span class="tech-badge">PostgreSQL</span>
+              <span class="tech-badge">WhatsApp API</span>
+            </div>
+            <h3 class="project-title">RestaurantOS</h3>
+            <h4 class="project-subtitle">AI-powered Restaurant Management System</h4>
+            <p class="project-desc">A complete restaurant operating software uniting contactless dining, real-time
+              kitchen dispatching, and automated WhatsApp order updates.</p>
+            <div class="project-features-list">
+              <span class="feature-tag"><i class="fas fa-check-circle"></i> Restaurant Website</span>
+              <span class="feature-tag"><i class="fas fa-check-circle"></i> Admin Dashboard</span>
+              <span class="feature-tag"><i class="fas fa-check-circle"></i> Kitchen Dashboard</span>
+              <span class="feature-tag"><i class="fas fa-check-circle"></i> WhatsApp Orders</span>
+              <span class="feature-tag"><i class="fas fa-check-circle"></i> QR Menu System</span>
+              <span class="feature-tag"><i class="fas fa-check-circle"></i> Revenue Analytics</span>
+            </div>
+            <div class="project-actions">
+              <a href="https://github.com" target="_blank" class="btn btn-secondary btn-card"><i
+                  class="fab fa-github"></i> GitHub</a>
+              <a href="#" class="btn btn-primary btn-card"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+              <button class="btn btn-secondary btn-card btn-case-study" data-project="restaurantos"><i
+                  class="fas fa-book-open"></i> Case Study</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 2: Teja Chest Hospital -->
+        <div class="project-card fade-in-up">
+          <div class="project-preview">
+            <img src="images/tejachest.png" alt="Teja Chest Hospital Management System" class="project-img">
+          </div>
+          <div class="project-content">
+            <div class="project-tech-badges">
+              <span class="tech-badge">HTML5</span>
+              <span class="tech-badge">CSS3</span>
+              <span class="tech-badge">JavaScript</span>
+              <span class="tech-badge">Python</span>
+              <span class="tech-badge">FastAPI</span>
+              <span class="tech-badge">SQLite</span>
+            </div>
+            <h3 class="project-title">Teja Chest Hospital</h3>
+            <h4 class="project-subtitle">Hospital Management System</h4>
+            <p class="project-desc">Comprehensive medical portal designed for managing patient records, doctor
+              consultations, appointment queues, and hospital metrics.</p>
+            <div class="project-features-list">
+              <span class="feature-tag"><i class="fas fa-check-circle"></i> Patient Records</span>
+              <span class="feature-tag"><i class="fas fa-check-circle"></i> Appointments</span>
+              <span class="feature-tag"><i class="fas fa-check-circle"></i> Doctor Dashboard</span>
+              <span class="feature-tag"><i class="fas fa-check-circle"></i> Admin Dashboard</span>
+              <span class="feature-tag"><i class="fas fa-check-circle"></i> Medical Reports</span>
+              <span class="feature-tag"><i class="fas fa-check-circle"></i> Queue Management</span>
+            </div>
+            <div class="project-actions">
+              <a href="https://github.com" target="_blank" class="btn btn-secondary btn-card"><i
+                  class="fab fa-github"></i> GitHub</a>
+              <a href="#" class="btn btn-primary btn-card"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+              <button class="btn btn-secondary btn-card btn-case-study" data-project="auracare"><i
+                  class="fas fa-book-open"></i> Case Study</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 3: Ramanujan Academy -->
+        <div class="project-card fade-in-up">
+          <div class="project-preview">
+            <img src="images/ramanujan.png" alt="Ramanujan Academy Education Portal" class="project-img">
+          </div>
+          <div class="project-content">
+            <div class="project-tech-badges">
+              <span class="tech-badge">HTML5</span>
+              <span class="tech-badge">CSS3</span>
+              <span class="tech-badge">JavaScript</span>
+              <span class="tech-badge">REST APIs</span>
+              <span class="tech-badge">Supabase</span>
+            </div>
+            <h3 class="project-title">Ramanujan Academy</h3>
+            <h4 class="project-subtitle">Education Management Portal</h4>
+            <p class="project-desc">Full-featured EdTech portal for student admissions, course progress tracking,
+              attendance logging, and automated fee collections.</p>
+            <div class="project-features-list">
+              <span class="feature-tag"><i class="fas fa-check-circle"></i> Admissions Portal</span>
+              <span class="feature-tag"><i class="fas fa-check-circle"></i> Student Dashboard</span>
+              <span class="feature-tag"><i class="fas fa-check-circle"></i> Faculty Dashboard</span>
+              <span class="feature-tag"><i class="fas fa-check-circle"></i> Fee Management</span>
+              <span class="feature-tag"><i class="fas fa-check-circle"></i> Attendance System</span>
+              <span class="feature-tag"><i class="fas fa-check-circle"></i> Grade Reports</span>
+            </div>
+            <div class="project-actions">
+              <a href="https://github.com" target="_blank" class="btn btn-secondary btn-card"><i
+                  class="fab fa-github"></i> GitHub</a>
+              <a href="#" class="btn btn-primary btn-card"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+              <button class="btn btn-secondary btn-card btn-case-study" data-project="ramanujan"><i
+                  class="fas fa-book-open"></i> Case Study</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 4: The Prism Interiors -->
+        <div class="project-card fade-in-up">
+          <div class="project-preview">
+            <img src="images/prisminteriors.png" alt="The Prism Interiors Platform" class="project-img">
+          </div>
+          <div class="project-content">
+            <div class="project-tech-badges">
+              <span class="tech-badge">HTML5</span>
+              <span class="tech-badge">CSS3 (Grid)</span>
+              <span class="tech-badge">Vanilla JS</span>
+              <span class="tech-badge">SEO</span>
+              <span class="tech-badge">Vercel</span>
+            </div>
+            <h3 class="project-title">The Prism Interiors</h3>
+            <h4 class="project-subtitle">Interior Design Portfolio Platform</h4>
+            <p class="project-desc">A premium architectural design showcase featuring dynamic project filtering, client
+              consultation booking, and ultra-fast visual rendering.</p>
+            <div class="project-features-list">
+              <span class="feature-tag"><i class="fas fa-check-circle"></i> Project Gallery</span>
+              <span class="feature-tag"><i class="fas fa-check-circle"></i> Lead Forms</span>
+              <span class="feature-tag"><i class="fas fa-check-circle"></i> Service Pages</span>
+              <span class="feature-tag"><i class="fas fa-check-circle"></i> Client Testimonials</span>
+              <span class="feature-tag"><i class="fas fa-check-circle"></i> Responsive Design</span>
+              <span class="feature-tag"><i class="fas fa-check-circle"></i> Consultation Booker</span>
+            </div>
+            <div class="project-actions">
+              <a href="https://github.com" target="_blank" class="btn btn-secondary btn-card"><i
+                  class="fab fa-github"></i> GitHub</a>
+              <a href="#" class="btn btn-primary btn-card"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+              <button class="btn btn-secondary btn-card btn-case-study" data-project="interior"><i
+                  class="fas fa-book-open"></i> Case Study</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 5: Smart Hostel -->
+        <div class="project-card fade-in-up">
+          <div class="project-preview">
+            <img src="images/smarthostel.png" alt="Smart Hostel System" class="project-img">
+          </div>
+          <div class="project-content">
+            <div class="project-tech-badges">
+              <span class="tech-badge">HTML5</span>
+              <span class="tech-badge">CSS3</span>
+              <span class="tech-badge">JavaScript</span>
+              <span class="tech-badge">FastAPI</span>
+              <span class="tech-badge">SQLite</span>
+            </div>
+            <h3 class="project-title">Smart Hostel</h3>
+            <h4 class="project-subtitle">Hostel Management System</h4>
+            <p class="project-desc">Operational lodging platform for automated room allocation matrices, recurring rent
+              tracking, maintenance complaints, and student profiles.</p>
+            <div class="project-features-list">
+              <span class="feature-tag"><i class="fas fa-check-circle"></i> Room Allocation</span>
+              <span class="feature-tag"><i class="fas fa-check-circle"></i> Fee Tracking</span>
+              <span class="feature-tag"><i class="fas fa-check-circle"></i> Maintenance Complaints</span>
+              <span class="feature-tag"><i class="fas fa-check-circle"></i> Financial Reports</span>
+              <span class="feature-tag"><i class="fas fa-check-circle"></i> Student Portal</span>
+              <span class="feature-tag"><i class="fas fa-check-circle"></i> Occupancy Matrix</span>
+            </div>
+            <div class="project-actions">
+              <a href="https://github.com" target="_blank" class="btn btn-secondary btn-card"><i
+                  class="fab fa-github"></i> GitHub</a>
+              <a href="#" class="btn btn-primary btn-card"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+              <button class="btn btn-secondary btn-card btn-case-study" data-project="smarthostel"><i
+                  class="fas fa-book-open"></i> Case Study</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Project 6: Balaramayya Supermarket -->
+        <div class="project-card fade-in-up">
+          <div class="project-preview">
+            <img src="images/balaramayya.png" alt="Balaramayya Supermarket Platform" class="project-img">
+          </div>
+          <div class="project-content">
+            <div class="project-tech-badges">
+              <span class="tech-badge">HTML5</span>
+              <span class="tech-badge">CSS3</span>
+              <span class="tech-badge">JavaScript</span>
+              <span class="tech-badge">FastAPI</span>
+              <span class="tech-badge">PostgreSQL</span>
+              <span class="tech-badge">WhatsApp API</span>
+            </div>
+            <h3 class="project-title">Balaramayya Supermarket</h3>
+            <h4 class="project-subtitle">E-Commerce &amp; Retail Platform</h4>
+            <p class="project-desc">A premium wholesale and retail supermarket web platform for fresh produce, pantry
+              staples, daily essentials, fast local delivery scheduling, and inventory analytics.</p>
+            <div class="project-features-list">
+              <span class="feature-tag"><i class="fas fa-check-circle"></i> Online Storefront</span>
+              <span class="feature-tag"><i class="fas fa-check-circle"></i> 30-Min Fast Delivery</span>
+              <span class="feature-tag"><i class="fas fa-check-circle"></i> Wholesale &amp; Retail</span>
+              <span class="feature-tag"><i class="fas fa-check-circle"></i> Inventory Analytics</span>
+              <span class="feature-tag"><i class="fas fa-check-circle"></i> WhatsApp Orders</span>
+              <span class="feature-tag"><i class="fas fa-check-circle"></i> Flash Sale Engine</span>
+            </div>
+            <div class="project-actions">
+              <a href="https://github.com" target="_blank" class="btn btn-secondary btn-card"><i
+                  class="fab fa-github"></i> GitHub</a>
+              <a href="https://supermarket2026.vercel.app" class="btn btn-primary btn-card"><i
+                  class="fas fa-external-link-alt"></i> Live Demo</a>
+              <button class="btn btn-secondary btn-card btn-case-study" data-project="businessflow"><i
+                  class="fas fa-book-open"></i> Case Study</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== DEVELOPMENT PROCESS SECTION ==================== -->
+  <section id="experience" class="process">
+    <div class="container">
+      <div class="section-header fade-in-up">
+        <span class="section-badge"><i class="fas fa-stream"></i> Engineering Workflow</span>
+        <h2 class="section-title">My Development Process</h2>
+        <p class="section-subtitle">A structured, 6-phase engineering lifecycle that guarantees high quality, speed, and
+          continuous support.</p>
+      </div>
+
+      <div class="process-timeline fade-in-up">
+        <!-- Step 1 -->
+        <div class="process-step">
+          <div class="step-number-node">01</div>
+          <h3 class="step-title">Understand</h3>
+          <p class="step-desc">Discovery call, business goals mapping, target audience analysis, and requirement
+            framing.</p>
+        </div>
+
+        <!-- Step 2 -->
+        <div class="process-step">
+          <div class="step-number-node">02</div>
+          <h3 class="step-title">Design</h3>
+          <p class="step-desc">UI/UX wireframing, architecture blueprinting, database schema design, and API design.</p>
+        </div>
+
+        <!-- Step 3 -->
+        <div class="process-step">
+          <div class="step-number-node">03</div>
+          <h3 class="step-title">Develop</h3>
+          <p class="step-desc">Writing clean, modular frontend code and resilient FastAPI/Python backend services.</p>
+        </div>
+
+        <!-- Step 4 -->
+        <div class="process-step">
+          <div class="step-number-node">04</div>
+          <h3 class="step-title">Test</h3>
+          <p class="step-desc">Rigorous cross-browser testing, mobile responsiveness audit, Lighthouse score
+            verification.</p>
+        </div>
+
+        <!-- Step 5 -->
+        <div class="process-step">
+          <div class="step-number-node">05</div>
+          <h3 class="step-title">Deploy</h3>
+          <p class="step-desc">Automated CI/CD pipelines, SSL certificate setup, and deployment to Docker/Vercel/Render.
+          </p>
+        </div>
+
+        <!-- Step 6 -->
+        <div class="process-step">
+          <div class="step-number-node">06</div>
+          <h3 class="step-title">Support</h3>
+          <p class="step-desc">Ongoing monitoring, performance tuning, security updates, and scaling consultations.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== ACHIEVEMENTS SECTION ==================== -->
+  <section class="achievements">
+    <div class="container">
+      <div class="section-header fade-in-up">
+        <span class="section-badge"><i class="fas fa-trophy"></i> Core Competencies</span>
+        <h2 class="section-title">Technical Mastery &amp; Expertise</h2>
+        <p class="section-subtitle">Proven skills honed across full-stack engineering and intelligent workflow design.
+        </p>
+      </div>
+
+      <div class="achievements-grid">
+        <div class="achievement-card fade-in-up">
+          <div class="achievement-icon"><i class="fas fa-brain"></i></div>
+          <h3 class="achievement-title">AI Projects</h3>
+          <p class="achievement-sub">LLM Agent &amp; Workflow Integration</p>
+        </div>
+
+        <div class="achievement-card fade-in-up">
+          <div class="achievement-icon"><i class="fas fa-code"></i></div>
+          <h3 class="achievement-title">Full Stack Dev</h3>
+          <p class="achievement-sub">Clean Architecture &amp; REST APIs</p>
+        </div>
+
+        <div class="achievement-card fade-in-up">
+          <div class="achievement-icon"><i class="fas fa-lightbulb"></i></div>
+          <h3 class="achievement-title">Problem Solving</h3>
+          <p class="achievement-sub">Business Logic Optimization</p>
+        </div>
+
+        <div class="achievement-card fade-in-up">
+          <div class="achievement-icon"><i class="fas fa-cogs"></i></div>
+          <h3 class="achievement-title">Automation</h3>
+          <p class="achievement-sub">n8n &amp; WhatsApp Integration</p>
+        </div>
+
+        <div class="achievement-card fade-in-up">
+          <div class="achievement-icon"><i class="fas fa-mobile-alt"></i></div>
+          <h3 class="achievement-title">Responsive Design</h3>
+          <p class="achievement-sub">Handcrafted Modern UI/UX</p>
+        </div>
+      </div>
+
+      <!-- PROJECT HIGHLIGHTS / TRUST BANNER -->
+      <div class="trust-section fade-in-up">
+        <div class="trust-content">
+          <div class="trust-quote-icon"><i class="fas fa-quote-left"></i></div>
+          <p class="trust-statement">
+            "These projects demonstrate my technical capabilities and the type of digital solutions I build. I believe
+            in earning trust through quality work and real client results."
+          </p>
+          <div class="trust-author">
+            <img src="images/profile.jpg" alt="Yerra Venkat Praveen" class="trust-avatar">
+            <div>
+              <div class="trust-author-name">Yerra Venkat Praveen</div>
+              <div class="trust-author-role">Full Stack Developer &amp; AI Automation Engineer</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== CONTACT SECTION ==================== -->
+  <section id="contact" class="contact">
+    <div class="container">
+      <div class="section-header fade-in-up">
+        <span class="section-badge"><i class="fas fa-paper-plane"></i> Get In Touch</span>
+        <h2 class="section-title">Let's Build Something Exceptional</h2>
+        <p class="section-subtitle">Whether you need a custom web platform, dashboard, or AI automation workflow, I'm
+          ready to help.</p>
+      </div>
+
+      <div class="contact-grid">
+        <!-- Contact Info Cards -->
+        <div class="contact-info fade-in-up">
+          <div class="contact-card">
+            <div class="contact-icon"><i class="fas fa-envelope"></i></div>
+            <div class="contact-details">
+              <h4>Email</h4>
+              <p><a href="mailto:venkatpraveens2006@gmail.com">venkatpraveens2006@gmail.com</a></p>
+            </div>
+          </div>
+
+          <div class="contact-card">
+            <div class="contact-icon"><i class="fas fa-phone-alt"></i></div>
+            <div class="contact-details">
+              <h4>Phone / WhatsApp</h4>
+              <p><a href="tel:+918341993998">+91 8341993998</a></p>
+            </div>
+          </div>
+
+          <div class="contact-card">
+            <div class="contact-icon"><i class="fab fa-linkedin-in"></i></div>
+            <div class="contact-details">
+              <h4>LinkedIn</h4>
+              <p><a href="https://www.linkedin.com/in/yerravenkatpraveen/"
+                  target="_blank">linkedin.com/in/yerravenkatpraveen</a></p>
+            </div>
+          </div>
+
+          <div class="contact-card">
+            <div class="contact-icon"><i class="fab fa-github"></i></div>
+            <div class="contact-details">
+              <h4>GitHub</h4>
+              <p><a href="https://github.com/venkatpraveen06" target="_blank">github.com/venkatpraveen06</a></p>
+            </div>
+          </div>
+
+          <div class="contact-card">
+            <div class="contact-icon"><i class="fab fa-instagram"></i></div>
+            <div class="contact-details">
+              <h4>Instagram</h4>
+              <p><a href="https://www.instagram.com/vikramadhitya69/" target="_blank">@vikramadhitya69</a></p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Contact Form -->
+        <div class="contact-form-container fade-in-up">
+          <div class="form-toast"></div>
+          <form class="contact-form">
+            <div class="form-group">
+              <label class="form-label" for="form-name">Your Name *</label>
+              <input type="text" id="form-name" name="name" class="form-input" placeholder="e.g. Sarah Connor" required>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="form-email">Email Address *</label>
+              <input type="email" id="form-email" name="email" class="form-input" placeholder="e.g. sarah@startup.com"
+                required>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="form-subject">Service Required</label>
+              <select id="form-subject" name="subject" class="form-input">
+                <option value="Website Development">Website Development</option>
+                <option value="Dashboard Development">Dashboard Development</option>
+                <option value="Business Automation">Business AI &amp; Automation</option>
+                <option value="Restaurant System">Restaurant OS / Digital Solution</option>
+                <option value="Hospital Management">Hospital System</option>
+                <option value="Custom Software">Custom Software Engineering</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label class="form-label" for="form-message">Project Details *</label>
+              <textarea id="form-message" name="message" class="form-textarea"
+                placeholder="Tell me about your business goals, project scope, and timeline..." required></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary" style="width: 100%;">
+              <i class="fas fa-paper-plane"></i> Send Message
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div class="footer-brand">Yerra Venkat Praveen</div>
+          <p class="footer-desc">
+            Full Stack Developer &amp; AI Automation Engineer. Building modern web platforms, intelligent dashboards,
+            and autonomous business workflows.
+          </p>
+        </div>
+
+        <div>
+          <h4 class="footer-title">Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer-title">Connect</h4>
+          <div class="footer-socials">
+            <a href="https://github.com/venkatpraveen06" target="_blank" class="social-icon" aria-label="GitHub"><i
+                class="fab fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/yerravenkatpraveen/" target="_blank" class="social-icon"
+              aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            <a href="https://www.instagram.com/vikramadhitya69/" target="_blank" class="social-icon"
+              aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="mailto:venkatpraveens2006@gmail.com" class="social-icon" aria-label="Email"><i
+                class="fas fa-envelope"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div>&copy; 2026 Venkat Praveen. All rights reserved. Handcrafted with HTML5, CSS3 &amp; Vanilla JavaScript.
+        </div>
+        <div><a href="#home" style="color: #94A3B8;"><i class="fas fa-arrow-up"></i> Back to Top</a></div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ==================== CASE STUDY MODAL OVERLAY ==================== -->
+  <div class="modal-overlay">
+    <div class="modal-container">
+      <div class="modal-header">
+        <h3 class="modal-title">Project Case Study</h3>
+        <button class="modal-close" aria-label="Close modal">&times;</button>
+      </div>
+      <div class="modal-body">
+        <!-- Content dynamically injected by main.js -->
+      </div>
+    </div>
+  </div>
+
+  <!-- JavaScript -->
+  <script src="js/main.js"></script>
+</body>
+
+</html>
