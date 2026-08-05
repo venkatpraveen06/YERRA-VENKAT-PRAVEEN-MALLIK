@@ -11,6 +11,8 @@ document.addEventListener('DOMContentLoaded', () => {
   initCaseStudyModal();
   initContactForm();
   initSmoothScroll();
+  initCodeTypingAnimation();
+  initHeroTitleTypingAnimation();
 });
 
 /* 1. Sticky Navbar Shrink on Scroll */
@@ -46,23 +48,53 @@ function initNavbar() {
   });
 }
 
-/* 2. Mobile Drawer Navigation */
+/* 2. Mobile Popout Sidebar Navigation */
 function initMobileMenu() {
   const toggleBtn = document.querySelector('.menu-toggle');
   const navMenu = document.querySelector('.nav-menu');
   const navLinks = document.querySelectorAll('.nav-link');
+  const overlay = document.querySelector('.sidebar-overlay');
 
   if (toggleBtn && navMenu) {
-    toggleBtn.addEventListener('click', () => {
-      navMenu.classList.toggle('active');
+    function openMenu() {
+      toggleBtn.classList.add('active');
+      navMenu.classList.add('active');
+      if (overlay) overlay.classList.add('active');
+      toggleBtn.setAttribute('aria-expanded', 'true');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeMenu() {
+      toggleBtn.classList.remove('active');
+      navMenu.classList.remove('active');
+      if (overlay) overlay.classList.remove('active');
+      toggleBtn.setAttribute('aria-expanded', 'false');
+      document.body.style.overflow = '';
+    }
+
+    function toggleMenu() {
       const isExpanded = navMenu.classList.contains('active');
-      toggleBtn.setAttribute('aria-expanded', isExpanded);
-    });
+      if (isExpanded) {
+        closeMenu();
+      } else {
+        openMenu();
+      }
+    }
+
+    toggleBtn.addEventListener('click', toggleMenu);
+
+    if (overlay) {
+      overlay.addEventListener('click', closeMenu);
+    }
 
     navLinks.forEach(link => {
-      link.addEventListener('click', () => {
-        navMenu.classList.remove('active');
-      });
+      link.addEventListener('click', closeMenu);
+    });
+
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && navMenu.classList.contains('active')) {
+        closeMenu();
+      }
     });
   }
 }
@@ -370,4 +402,195 @@ function initSmoothScroll() {
       }
     });
   });
+}
+
+/* 8. Code Editor Typing Letter Animation */
+function initCodeTypingAnimation() {
+  const codeContainer = document.querySelector('.code-lines');
+  if (!codeContainer) return;
+
+  const lines = [
+    [
+      { text: "from ", class: "c-kw" },
+      { text: "fastapi ", class: "" },
+      { text: "import ", class: "c-kw" },
+      { text: "FastAPI, Depends", class: "" }
+    ],
+    [
+      { text: "from ", class: "c-kw" },
+      { text: "ai_agent ", class: "" },
+      { text: "import ", class: "c-kw" },
+      { text: "GeminiBot", class: "" }
+    ],
+    [],
+    [
+      { text: "app = ", class: "" },
+      { text: "FastAPI", class: "c-fn" },
+      { text: "(title=", class: "" },
+      { text: '"BusinessFlow"', class: "c-str" },
+      { text: ")", class: "" }
+    ],
+    [
+      { text: "agent = ", class: "" },
+      { text: "GeminiBot", class: "c-fn" },
+      { text: "()", class: "" }
+    ],
+    [],
+    [
+      { text: "# Auto qualify inbound leads", class: "c-cm" }
+    ],
+    [
+      { text: "@app.post", class: "c-kw" },
+      { text: "(", class: "" },
+      { text: '"/api/v1/lead"', class: "c-str" },
+      { text: ")", class: "" }
+    ],
+    [
+      { text: "async def ", class: "c-kw" },
+      { text: "handle_lead", class: "c-fn" },
+      { text: "(payload: dict):", class: "" }
+    ],
+    [
+      { text: "  res = ", class: "" },
+      { text: "await ", class: "c-kw" },
+      { text: "agent.", class: "" },
+      { text: "analyze", class: "c-fn" },
+      { text: "(payload)", class: "" }
+    ],
+    [
+      { text: "  ", class: "" },
+      { text: "return ", class: "c-kw" },
+      { text: "{\"", class: "" },
+      { text: "status", class: "c-str" },
+      { text: "\": \"", class: "" },
+      { text: "qualified", class: "c-str" },
+      { text: "\", \"", class: "" },
+      { text: "data", class: "c-str" },
+      { text: "\": res}", class: "" }
+    ]
+  ];
+
+  let currentLineIndex = 0;
+  let currentTokenIndex = 0;
+  let currentCharIndex = 0;
+
+  const cursor = document.createElement('span');
+  cursor.className = 'code-cursor';
+
+  function render() {
+    codeContainer.innerHTML = '';
+
+    for (let l = 0; l <= currentLineIndex; l++) {
+      const lineDiv = document.createElement('div');
+      const lineData = lines[l];
+
+      if (!lineData || lineData.length === 0) {
+        lineDiv.innerHTML = '&nbsp;';
+      } else {
+        for (let t = 0; t < lineData.length; t++) {
+          if (l < currentLineIndex || (l === currentLineIndex && t < currentTokenIndex)) {
+            const span = document.createElement('span');
+            if (lineData[t].class) span.className = lineData[t].class;
+            span.textContent = lineData[t].text;
+            lineDiv.appendChild(span);
+          } else if (l === currentLineIndex && t === currentTokenIndex) {
+            const span = document.createElement('span');
+            if (lineData[t].class) span.className = lineData[t].class;
+            span.textContent = lineData[t].text.substring(0, currentCharIndex);
+            lineDiv.appendChild(span);
+          }
+        }
+      }
+
+      if (l === currentLineIndex) {
+        lineDiv.appendChild(cursor);
+      }
+
+      codeContainer.appendChild(lineDiv);
+    }
+  }
+
+  function step() {
+    render();
+
+    const currentLine = lines[currentLineIndex];
+
+    if (!currentLine || currentLine.length === 0) {
+      currentLineIndex++;
+      currentTokenIndex = 0;
+      currentCharIndex = 0;
+      if (currentLineIndex >= lines.length) {
+        setTimeout(resetAndLoop, 4500);
+        return;
+      }
+      setTimeout(step, 140);
+      return;
+    }
+
+    const currentToken = currentLine[currentTokenIndex];
+    if (currentCharIndex < currentToken.text.length) {
+      currentCharIndex++;
+      const delay = Math.random() * 25 + 25;
+      setTimeout(step, delay);
+    } else {
+      currentTokenIndex++;
+      currentCharIndex = 0;
+      if (currentTokenIndex >= currentLine.length) {
+        currentLineIndex++;
+        currentTokenIndex = 0;
+        if (currentLineIndex >= lines.length) {
+          setTimeout(resetAndLoop, 4500);
+          return;
+        }
+        setTimeout(step, 120);
+      } else {
+        setTimeout(step, 30);
+      }
+    }
+  }
+
+  function resetAndLoop() {
+    currentLineIndex = 0;
+    currentTokenIndex = 0;
+    currentCharIndex = 0;
+    step();
+  }
+
+  step();
+}
+
+/* 9. Hero Title Typewriter Animation ("Hi, I'm Venkat Praveen") */
+function initHeroTitleTypingAnimation() {
+  const greetingEl = document.querySelector('.hero-greeting-text');
+  const nameEl = document.querySelector('.hero-name-text');
+  if (!greetingEl || !nameEl) return;
+
+  const greetingText = "Hi, I'm";
+  const nameText = "Venkat Praveen";
+
+  let greetingCharIndex = 0;
+  let nameCharIndex = 0;
+
+  greetingEl.textContent = '';
+  nameEl.textContent = '';
+
+  function typeGreeting() {
+    if (greetingCharIndex < greetingText.length) {
+      greetingCharIndex++;
+      greetingEl.textContent = greetingText.substring(0, greetingCharIndex);
+      setTimeout(typeGreeting, 70);
+    } else {
+      setTimeout(typeName, 150);
+    }
+  }
+
+  function typeName() {
+    if (nameCharIndex < nameText.length) {
+      nameCharIndex++;
+      nameEl.textContent = nameText.substring(0, nameCharIndex);
+      setTimeout(typeName, 85);
+    }
+  }
+
+  typeGreeting();
 }
