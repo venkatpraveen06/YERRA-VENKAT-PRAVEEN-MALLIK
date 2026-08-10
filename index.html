@@ -4,24 +4,24 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Venkat Praveen — Founder of FlowGen | Full Stack Developer &amp; AI Automation Engineer</title>
+  <title>Venkat Praveen | AI Engineer &amp; Software Developer &amp; Founder of Flowgen</title>
   <meta name="description"
-    content="Portfolio of Venkat Praveen — Founder of FlowGen, Full Stack Developer &amp; AI Automation Engineer specializing in modern web applications, dashboards, AI workflows, and custom enterprise software.">
+    content="Venkat Praveen is an AI-focused Computer Science student, software developer, and entrepreneur building AI applications, websites, automation systems and digital solutions.">
   <meta name="keywords"
-    content="Venkat Praveen, Full Stack Developer, AI Automation Engineer, React.js, Angular, FastAPI, Python, JavaScript, HTML5, CSS3, PostgreSQL, n8n, Gemini AI">
+    content="Venkat Praveen, AI Engineer, Software Developer, Founder of Flowgen, Machine Learning, NLP, FastAPI, Python, React, Next.js, Node.js, n8n, WhatsApp Automation, KL University">
   <meta name="author" content="Venkat Praveen">
 
   <!-- OpenGraph SEO -->
-  <meta property="og:title" content="Venkat Praveen — Full Stack Developer & AI Automation Engineer">
+  <meta property="og:title" content="Venkat Praveen | AI Engineer &amp; Software Developer &amp; Founder of Flowgen">
   <meta property="og:description"
-    content="I build modern websites, dashboards, AI automation systems, and scalable web applications that help businesses deliver better digital experiences.">
+    content="I build intelligent digital experiences that connect AI, software, and business automation.">
   <meta property="og:type" content="website">
 
-  <!-- Google Fonts: Plus Jakarta Sans & Fira Code -->
+  <!-- Google Fonts: Plus Jakarta Sans, Inter & Fira Code -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
-    href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
+    href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600&family=Inter:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap"
     rel="stylesheet">
 
   <!-- FontAwesome 6 for Icons -->
@@ -34,8 +34,26 @@
 
 <body>
 
-  <!-- ==================== STICKY NAVIGATION ==================== -->
-  <header class="navbar">
+  <!-- ==================== INITIAL PAGE LOADER ==================== -->
+  <div class="initial-loader" id="initialLoader">
+    <div class="loader-inner">
+      <div class="loader-logo">VP</div>
+      <div class="loader-bar">
+        <div class="loader-progress"></div>
+      </div>
+      <div class="loader-text">VENKAT PRAVEEN • FLOWGEN</div>
+    </div>
+  </div>
+
+  <!-- ==================== SCROLL PROGRESS BAR ==================== -->
+  <div class="scroll-progress-bar" id="scrollProgress"></div>
+
+  <!-- ==================== CUSTOM DUAL CURSOR (DESKTOP) ==================== -->
+  <div class="custom-cursor-dot" id="cursorDot"></div>
+  <div class="custom-cursor-ring" id="cursorRing"></div>
+
+  <!-- ==================== FLOATING PILL NAVIGATION ==================== -->
+  <header class="navbar" id="mainNavbar">
     <div class="container nav-container">
       <!-- Brand Logo -->
       <a href="#home" class="nav-brand">
@@ -47,17 +65,18 @@
       <ul class="nav-menu">
         <li><a href="#home" class="nav-link active">Home</a></li>
         <li><a href="#about" class="nav-link">About</a></li>
-        <li><a href="#projects" class="nav-link">Projects</a></li>
         <li><a href="#skills" class="nav-link">Skills</a></li>
         <li><a href="#services" class="nav-link">Services</a></li>
-        <li><a href="#experience" class="nav-link">Experience</a></li>
+        <li><a href="#projects" class="nav-link">Projects</a></li>
+        <li><a href="#flowgen" class="nav-link">Flowgen</a></li>
+        <li><a href="#journey" class="nav-link">Journey</a></li>
         <li><a href="#contact" class="nav-link">Contact</a></li>
       </ul>
 
-      <!-- Right CTA -->
+      <!-- Right CTA Button -->
       <div class="nav-cta">
-        <a href="#contact" class="btn btn-primary btn-sm">
-          <i class="fas fa-file-download"></i> Download Resume
+        <a href="#contact" class="btn btn-primary btn-draw btn-sm">
+          <span>Let's Talk <i class="fas fa-arrow-right icon-shift"></i></span>
         </a>
         <button class="menu-toggle" aria-label="Toggle Navigation Menu" aria-expanded="false">
           <span class="hamburger-box">
@@ -70,62 +89,54 @@
     </div>
   </header>
 
-  <!-- Sidebar Overlay Backdrop for Popout Drawer -->
+  <!-- Sidebar Overlay Backdrop for Popout Mobile Drawer -->
   <div class="sidebar-overlay" aria-hidden="true"></div>
 
   <!-- ==================== HERO SECTION ==================== -->
   <section id="home" class="hero">
+    <div class="ambient-orb orb-1"></div>
+    <div class="ambient-orb orb-2"></div>
+
     <div class="container hero-grid">
-      <!-- Left Hero Text -->
+      <!-- Left Hero Content -->
       <div class="hero-content fade-in-up">
-        <div class="hero-badge">
-          <span class="status-dot"></span>
-          Founder of FlowGen | Full Stack Developer &amp; AI Automation Engineer
+        <div class="hero-label-tag">
+          <span class="status-dot-blue"></span>
+          AI ENGINEER • DEVELOPER • ENTREPRENEUR
         </div>
 
         <h1 class="hero-title">
-          <span class="hero-greeting-text">Hi, I'm</span>
-          <span class="name-highlight"><span class="hero-name-text">Venkat Praveen</span><span class="hero-title-cursor"></span></span>
+          I build <span class="gradient-text-accent">intelligent</span><br>digital experiences.
         </h1>
 
+        <div class="hero-subheadline">
+          <span class="hero-greeting-text">Hi, I'm</span>
+          <span class="name-highlight"><span class="hero-name-text">Venkat Praveen</span><span class="hero-title-cursor"></span></span>
+        </div>
+
         <p class="hero-description">
-          Founder of <strong>FlowGen</strong>. I build modern websites, dashboards, AI automation systems, and scalable web applications that help businesses improve productivity and deliver better digital experiences.
+          I'm Venkat Praveen, a Computer Science student specializing in <strong>AI-Driven Language Technologies</strong> and the Founder of <strong>Flowgen</strong>. I build AI-powered applications, modern websites, automation systems and digital solutions that solve real-world problems.
         </p>
 
         <div class="hero-actions">
-          <a href="#projects" class="btn btn-primary">
-            <i class="fas fa-arrow-right"></i> View My Work
+          <a href="#projects" class="btn btn-primary btn-draw">
+            <span>View My Work <i class="fas fa-arrow-right icon-shift"></i></span>
           </a>
           <a href="#contact" class="btn btn-secondary">
-            <i class="fas fa-envelope"></i> Contact Me
+            <span>Let's Work Together →</span>
           </a>
         </div>
 
-        <!-- Quick Stats Grid -->
-        <div class="quick-stats">
-          <div class="stat-item">
-            <span class="stat-number" data-target="6" data-suffix="+">0</span>
-            <span class="stat-label">Projects</span>
-          </div>
-          <div class="stat-item">
-            <span class="stat-number" data-target="100" data-suffix="%">0</span>
-            <span class="stat-label">Responsive</span>
-          </div>
-          <div class="stat-item">
-            <span class="stat-number" data-target="1" data-prefix="AI" data-suffix="">AI</span>
-            <span class="stat-label">Automation</span>
-          </div>
-          <div class="stat-item">
-            <span class="stat-number" data-target="1" data-prefix="Fast" data-suffix="">Fast</span>
-            <span class="stat-label">Development</span>
-          </div>
+        <div class="hero-secondary-meta">
+          <i class="fas fa-location-dot" style="color: var(--color-accent-blue-light);"></i>
+          <span>Based in India • Available for opportunities &amp; client projects</span>
         </div>
       </div>
 
-      <!-- Right Custom HTML/CSS Handcrafted Coding Illustration -->
+      <!-- Right Futuristic Abstract Animated Visual -->
       <div class="hero-visual fade-in-up">
         <div class="workspace-container">
-          <!-- Floating Tech Tags -->
+          <!-- Floating Tech Badges -->
           <div class="floating-badge badge-html">&lt;HTML5&gt;</div>
           <div class="floating-badge badge-css">.CSS3 {}</div>
           <div class="floating-badge badge-js">JS()</div>
@@ -133,7 +144,7 @@
           <div class="floating-badge badge-fastapi">FastAPI</div>
           <div class="floating-badge badge-github">git commit</div>
 
-          <!-- Laptop Mockup -->
+          <!-- Code Editor Laptop Mockup -->
           <div class="laptop-mockup">
             <div class="laptop-camera"></div>
             <div class="screen-display">
@@ -144,19 +155,7 @@
                 <span class="editor-title">main.py — FastAPI AI Agent</span>
               </div>
               <div class="code-lines">
-                <div><span class="c-kw">from</span> fastapi <span class="c-kw">import</span> FastAPI, Depends</div>
-                <div><span class="c-kw">from</span> ai_agent <span class="c-kw">import</span> GeminiBot</div>
-                <br>
-                <div>app = <span class="c-fn">FastAPI</span>(title=<span class="c-str">"BusinessFlow"</span>)</div>
-                <div>agent = <span class="c-fn">GeminiBot</span>()</div>
-                <br>
-                <div><span class="c-cm"># Auto qualify inbound leads</span></div>
-                <div><span class="c-kw">@app.post</span>(<span class="c-str">"/api/v1/lead"</span>)</div>
-                <div><span class="c-kw">async def</span> <span class="c-fn">handle_lead</span>(payload: dict):</div>
-                <div>&nbsp;&nbsp;res = <span class="c-kw">await</span> agent.<span class="c-fn">analyze</span>(payload)
-                </div>
-                <div>&nbsp;&nbsp;<span class="c-kw">return</span> {<span class="c-str">"status"</span>: <span
-                    class="c-str">"qualified"</span>, <span class="c-str">"data"</span>: res}</div>
+                <!-- Typed character by character in main.js -->
               </div>
             </div>
           </div>
@@ -166,7 +165,7 @@
             <div class="laptop-notch"></div>
           </div>
 
-          <!-- Workspace Desk & Items -->
+          <!-- Desk Surface -->
           <div class="desk-surface"></div>
 
           <!-- Coffee Cup -->
@@ -193,28 +192,55 @@
     </div>
   </section>
 
+  <!-- ==================== TRUST / QUICK STATS SECTION ==================== -->
+  <section class="trust-stats-section">
+    <div class="container">
+      <div class="stats-horizontal-card fade-in-up">
+        <div class="stat-col">
+          <div class="stat-main-text">4th Year</div>
+          <div class="stat-sub-text">B.Tech CSE</div>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat-col">
+          <div class="stat-main-text">AI Focus</div>
+          <div class="stat-sub-text">AI / NLP / ML</div>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat-col">
+          <div class="stat-main-text" data-target="6" data-suffix="+">6+ Projects</div>
+          <div class="stat-sub-text">Real-World Builds</div>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat-col">
+          <div class="stat-main-text">Flowgen</div>
+          <div class="stat-sub-text">Founder</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <!-- ==================== ABOUT SECTION ==================== -->
   <section id="about" class="about">
     <div class="container">
       <div class="section-header fade-in-up">
         <span class="section-badge"><i class="fas fa-user-check"></i> About Me</span>
-        <h2 class="section-title">Engineered for Scalability, Built with Purpose</h2>
-        <p class="section-subtitle">A senior approach to full-stack application design and automated intelligence.</p>
+        <h2 class="section-title">A developer who builds beyond code.</h2>
+        <p class="section-subtitle">Combining Computer Science rigor, artificial intelligence models, and an entrepreneurial approach to digital systems.</p>
       </div>
 
       <div class="about-grid">
-        <!-- About Narrative & Photo Grid -->
+        <!-- Main Narrative Card -->
         <div class="about-card-primary fade-in-up">
           <div class="about-profile-header">
             <div class="profile-img-wrapper">
-              <img src="images/profile.jpg" alt="Yerra Venkat Praveen" class="profile-avatar-lg">
+              <img src="images/profile.jpg" alt="Venkat Praveen" class="profile-avatar-lg">
               <span class="status-indicator" title="Available for projects"></span>
             </div>
             <div class="profile-info-group">
-              <h3 class="profile-name-title">Yerra Venkat Praveen</h3>
+              <h3 class="profile-name-title">Yerra Venkat Praveen Mallik</h3>
               <div class="profile-tags-wrapper">
-                <span class="about-highlight-box" style="margin-bottom: 0;">
-                  <i class="fas fa-building"></i> Founder of FlowGen
+                <span class="about-highlight-box">
+                  <i class="fas fa-building"></i> Founder of Flowgen
                 </span>
                 <span class="status-badge-pill">
                   <span class="pulse-dot"></span> Available for Projects
@@ -224,47 +250,40 @@
           </div>
 
           <p class="about-text" style="margin-top: 20px;">
-            I am <strong>Yerra Venkat Praveen</strong>, Founder of <strong>FlowGen</strong>, Full Stack Developer, and AI Automation Engineer passionate about building modern web applications, robust backends, and autonomous workflows.
+            I'm a 4th-year Computer Science student at <strong>KL Deemed to be University</strong> specializing in <strong>AI-Driven Language Technologies</strong>, passionate about Artificial Intelligence, software development, automation and digital products.
           </p>
           <p class="about-text">
-            My work centers around solving real business bottlenecks—whether that's streamlining restaurant operations
-            with QR ordering, building HIPAA-ready hospital management software, or creating AI agents that auto-qualify
-            inbound sales leads.
+            I enjoy turning ideas into practical systems—from AI-powered applications and conversational agents to responsive web platforms, workflow automation and enterprise business solutions.
           </p>
           <p class="about-text">
-            I believe software should be clean, scalable, fast, and human-centric. By combining modern web standards
-            with AI tools like Gemini and n8n, I deliver high-impact digital products.
+            Alongside my technical journey, I'm building <strong>Flowgen</strong> to help businesses improve their digital presence, generate leads, and automate customer communication.
           </p>
         </div>
 
-        <!-- Right Pillars Grid -->
+        <!-- Interactive Glass Role Cards Grid -->
         <div class="about-pillars fade-in-up">
           <div class="pillar-item">
-            <div class="pillar-icon"><i class="fas fa-layer-group"></i></div>
-            <h4 class="pillar-title">Clean Architecture</h4>
-            <p class="pillar-desc">Maintainable, modular codebases adhering to strict design patterns and accessibility
-              standards.</p>
+            <div class="pillar-icon"><i class="fas fa-brain"></i></div>
+            <h4 class="pillar-title">AI Engineer</h4>
+            <p class="pillar-desc">Designing LLM conversational agents, NLP toxicity classifiers, Gemini RAG pipelines, and PyTorch models.</p>
+          </div>
+
+          <div class="pillar-item">
+            <div class="pillar-icon"><i class="fas fa-code"></i></div>
+            <h4 class="pillar-title">Software Developer</h4>
+            <p class="pillar-desc">Engineering resilient backends with FastAPI/Python, PostgreSQL, and clean frontend web architectures.</p>
           </div>
 
           <div class="pillar-item">
             <div class="pillar-icon"><i class="fas fa-robot"></i></div>
-            <h4 class="pillar-title">AI Automation</h4>
-            <p class="pillar-desc">Integrating LLM agents, Gemini APIs, and n8n workflows to eliminate repetitive
-              business manual labor.</p>
+            <h4 class="pillar-title">Automation Builder</h4>
+            <p class="pillar-desc">Connecting APIs, n8n workflows, WhatsApp business bots, and lead qualification engines to eliminate manual work.</p>
           </div>
 
           <div class="pillar-item">
-            <div class="pillar-icon"><i class="fas fa-chart-line"></i></div>
-            <h4 class="pillar-title">Business Value First</h4>
-            <p class="pillar-desc">Every feature, query, and pixel is crafted to increase conversions, efficiency, and
-              revenue.</p>
-          </div>
-
-          <div class="pillar-item">
-            <div class="pillar-icon"><i class="fas fa-shield-alt"></i></div>
-            <h4 class="pillar-title">Scalable &amp; Secure</h4>
-            <p class="pillar-desc">Hardened REST APIs, optimized SQL schemas, and zero-trust data validation policies.
-            </p>
+            <div class="pillar-icon"><i class="fas fa-rocket"></i></div>
+            <h4 class="pillar-title">Founder @ Flowgen</h4>
+            <p class="pillar-desc">Leading Flowgen to deliver conversion-driven websites, automated lead capture, and streamlined client communications.</p>
           </div>
         </div>
       </div>
@@ -275,18 +294,51 @@
   <section id="skills" class="skills">
     <div class="container">
       <div class="section-header fade-in-up">
-        <span class="section-badge"><i class="fas fa-tools"></i> Technical Expertise</span>
-        <h2 class="section-title">Modern Stack &amp; Enterprise Tools</h2>
-        <p class="section-subtitle">Carefully selected technologies for high performance, reliability, and automated
-          intelligence.</p>
+        <span class="section-badge"><i class="fas fa-tools"></i> Technical Toolkit</span>
+        <h2 class="section-title">My technical toolkit.</h2>
+        <p class="section-subtitle">Carefully selected technologies for high performance, artificial intelligence, and scalable software.</p>
       </div>
 
       <div class="skills-grid">
-        <!-- Frontend -->
+        <!-- Programming -->
+        <div class="skill-category-card fade-in-up">
+          <div class="category-header">
+            <div class="category-icon"><i class="fas fa-terminal"></i></div>
+            <h3 class="category-title">Programming</h3>
+          </div>
+          <div class="skills-tags">
+            <span class="skill-tag"><i class="fab fa-python" style="color: #3776AB;"></i> Python</span>
+            <span class="skill-tag"><i class="fab fa-js-square" style="color: #F7DF1E;"></i> JavaScript</span>
+            <span class="skill-tag"><i class="fas fa-code" style="color: #3178C6;"></i> TypeScript</span>
+            <span class="skill-tag"><i class="fab fa-java" style="color: #007396;"></i> Java</span>
+            <span class="skill-tag"><i class="fas fa-file-code" style="color: #A8B9CC;"></i> C</span>
+            <span class="skill-tag"><i class="fas fa-database" style="color: #336791;"></i> SQL</span>
+          </div>
+        </div>
+
+        <!-- AI / ML -->
+        <div class="skill-category-card fade-in-up">
+          <div class="category-header">
+            <div class="category-icon"><i class="fas fa-brain"></i></div>
+            <h3 class="category-title">AI / Machine Learning</h3>
+          </div>
+          <div class="skills-tags">
+            <span class="skill-tag"><i class="fas fa-robot" style="color: #FFD21E;"></i> Machine Learning</span>
+            <span class="skill-tag"><i class="fas fa-network-wired" style="color: #EE4C2C;"></i> Deep Learning</span>
+            <span class="skill-tag"><i class="fas fa-comments" style="color: #2563EB;"></i> Natural Language Processing (NLP)</span>
+            <span class="skill-tag"><i class="fas fa-flask" style="color: #F59E0B;"></i> PyTorch</span>
+            <span class="skill-tag"><i class="fas fa-cube" style="color: #FFD21E;"></i> Hugging Face</span>
+            <span class="skill-tag"><i class="fas fa-brain" style="color: #10A37F;"></i> OpenAI</span>
+            <span class="skill-tag"><i class="fas fa-sparkles" style="color: #2563EB;"></i> Google Gemini</span>
+            <span class="skill-tag"><i class="fas fa-project-diagram" style="color: #3178C6;"></i> Scikit-learn</span>
+          </div>
+        </div>
+
+        <!-- Web Development -->
         <div class="skill-category-card fade-in-up">
           <div class="category-header">
             <div class="category-icon"><i class="fas fa-desktop"></i></div>
-            <h3 class="category-title">Frontend</h3>
+            <h3 class="category-title">Web Development</h3>
           </div>
           <div class="skills-tags">
             <span class="skill-tag"><i class="fab fa-html5" style="color: #E44D26;"></i> HTML5</span>
@@ -294,102 +346,61 @@
             <span class="skill-tag"><i class="fab fa-js-square" style="color: #F7DF1E;"></i> JavaScript</span>
             <span class="skill-tag"><i class="fas fa-code" style="color: #3178C6;"></i> TypeScript</span>
             <span class="skill-tag"><i class="fab fa-react" style="color: #61DAFB;"></i> React</span>
-            <span class="skill-tag"><i class="fas fa-layer-group" style="color: #000000;"></i> Next.js</span>
-            <span class="skill-tag"><i class="fab fa-angular" style="color: #DD0031;"></i> Angular</span>
-            <span class="skill-tag"><i class="fas fa-mobile-alt"></i> Responsive Layouts</span>
-            <span class="skill-tag"><i class="fas fa-universal-access"></i> Web Accessibility (a11y)</span>
+            <span class="skill-tag"><i class="fas fa-layer-group"></i> Next.js</span>
+            <span class="skill-tag"><i class="fab fa-node-js" style="color: #339933;"></i> Node.js</span>
+            <span class="skill-tag"><i class="fas fa-server"></i> Express.js</span>
+            <span class="skill-tag"><i class="fas fa-bolt" style="color: #009688;"></i> FastAPI</span>
+            <span class="skill-tag"><i class="fas fa-flask"></i> Flask</span>
           </div>
         </div>
 
-        <!-- Backend & Databases -->
+        <!-- Databases -->
         <div class="skill-category-card fade-in-up">
           <div class="category-header">
-            <div class="category-icon"><i class="fas fa-server"></i></div>
-            <h3 class="category-title">Backend &amp; Databases</h3>
+            <div class="category-icon"><i class="fas fa-database"></i></div>
+            <h3 class="category-title">Databases</h3>
           </div>
           <div class="skills-tags">
-            <span class="skill-tag"><i class="fas fa-bolt" style="color: #009688;"></i> FastAPI</span>
-            <span class="skill-tag"><i class="fab fa-node-js" style="color: #339933;"></i> Node.js</span>
-            <span class="skill-tag"><i class="fas fa-server" style="color: #475569;"></i> Express.js</span>
-            <span class="skill-tag"><i class="fas fa-feather-alt" style="color: #E0234E;"></i> NestJS</span>
-            <span class="skill-tag"><i class="fab fa-python" style="color: #3776AB;"></i> Python</span>
-            <span class="skill-tag"><i class="fas fa-cubes" style="color: #092E20;"></i> Django</span>
-            <span class="skill-tag"><i class="fas fa-flask" style="color: #475569;"></i> Flask</span>
             <span class="skill-tag"><i class="fas fa-database" style="color: #336791;"></i> PostgreSQL</span>
             <span class="skill-tag"><i class="fas fa-leaf" style="color: #47A248;"></i> MongoDB</span>
             <span class="skill-tag"><i class="fas fa-memory" style="color: #DC382D;"></i> Redis</span>
             <span class="skill-tag"><i class="fas fa-bolt" style="color: #3ECF8E;"></i> Supabase</span>
             <span class="skill-tag"><i class="fas fa-fire" style="color: #FFCA28;"></i> Firebase Firestore</span>
             <span class="skill-tag"><i class="fas fa-database" style="color: #003B57;"></i> SQLite</span>
-            <span class="skill-tag"><i class="fas fa-key" style="color: #F59E0B;"></i> OAuth 2.0</span>
-            <span class="skill-tag"><i class="fas fa-shield-alt" style="color: #D63AF9;"></i> JWT Authentication</span>
-            <span class="skill-tag"><i class="fas fa-network-wired"></i> REST APIs</span>
           </div>
         </div>
 
-        <!-- Artificial Intelligence -->
-        <div class="skill-category-card fade-in-up">
-          <div class="category-header">
-            <div class="category-icon"><i class="fas fa-brain"></i></div>
-            <h3 class="category-title">Artificial Intelligence</h3>
-          </div>
-          <div class="skills-tags">
-            <span class="skill-tag"><i class="fas fa-brain" style="color: #10A37F;"></i> OpenAI</span>
-            <span class="skill-tag"><i class="fas fa-sparkles" style="color: #2563EB;"></i> Google Gemini</span>
-            <span class="skill-tag"><i class="fas fa-link" style="color: #1C3C3C;"></i> LangChain</span>
-            <span class="skill-tag"><i class="fas fa-robot" style="color: #FFD21E;"></i> Hugging Face</span>
-            <span class="skill-tag"><i class="fas fa-robot"></i> AI Agents</span>
-            <span class="skill-tag"><i class="fas fa-terminal"></i> Prompt Engineering</span>
-            <span class="skill-tag"><i class="fas fa-comments"></i> Conversational AI</span>
-            <span class="skill-tag"><i class="fas fa-database"></i> Vector RAG Workflows</span>
-          </div>
-        </div>
-
-        <!-- Automation & APIs -->
-        <div class="skill-category-card fade-in-up">
-          <div class="category-header">
-            <div class="category-icon"><i class="fas fa-cogs"></i></div>
-            <h3 class="category-title">Automation &amp; APIs</h3>
-          </div>
-          <div class="skills-tags">
-            <span class="skill-tag"><i class="fas fa-project-diagram" style="color: #FF6584;"></i> n8n</span>
-            <span class="skill-tag"><i class="fas fa-infinity" style="color: #6F42C1;"></i> Make</span>
-            <span class="skill-tag"><i class="fab fa-whatsapp" style="color: #25D366;"></i> WhatsApp Business API</span>
-            <span class="skill-tag"><i class="fas fa-plug"></i> API Integration</span>
-            <span class="skill-tag"><i class="fas fa-sync-alt"></i> Webhooks</span>
-            <span class="skill-tag"><i class="fas fa-tasks"></i> Task Scheduling</span>
-          </div>
-        </div>
-
-        <!-- Cloud & DevOps -->
+        <!-- DevOps & Cloud -->
         <div class="skill-category-card fade-in-up">
           <div class="category-header">
             <div class="category-icon"><i class="fas fa-cloud"></i></div>
-            <h3 class="category-title">Cloud &amp; DevOps</h3>
+            <h3 class="category-title">DevOps &amp; Cloud</h3>
           </div>
           <div class="skills-tags">
-            <span class="skill-tag"><i class="fab fa-docker" style="color: #2496ED;"></i> Docker</span>
-            <span class="skill-tag"><i class="fab fa-aws" style="color: #FF9900;"></i> AWS</span>
-            <span class="skill-tag"><i class="fab fa-google" style="color: #4285F4;"></i> Google Cloud</span>
-            <span class="skill-tag"><i class="fas fa-cloud-sun" style="color: #F38020;"></i> Cloudflare</span>
-            <span class="skill-tag"><i class="fas fa-globe"></i> Vercel</span>
-            <span class="skill-tag"><i class="fas fa-cloud" style="color: #46E3B7;"></i> Render</span>
             <span class="skill-tag"><i class="fab fa-git-alt" style="color: #F05032;"></i> Git</span>
             <span class="skill-tag"><i class="fab fa-github"></i> GitHub</span>
+            <span class="skill-tag"><i class="fab fa-docker" style="color: #2496ED;"></i> Docker</span>
+            <span class="skill-tag"><i class="fab fa-jenkins" style="color: #D24939;"></i> Jenkins</span>
+            <span class="skill-tag"><i class="fab fa-google" style="color: #4285F4;"></i> Google Cloud (GCP)</span>
+            <span class="skill-tag"><i class="fab fa-aws" style="color: #FF9900;"></i> AWS</span>
+            <span class="skill-tag"><i class="fas fa-globe"></i> Vercel</span>
+            <span class="skill-tag"><i class="fas fa-cloud" style="color: #46E3B7;"></i> Render</span>
           </div>
         </div>
 
-        <!-- Architecture & Methodologies -->
+        <!-- Automation & Workflows -->
         <div class="skill-category-card fade-in-up">
           <div class="category-header">
-            <div class="category-icon"><i class="fas fa-code"></i></div>
-            <h3 class="category-title">Engineering Standards</h3>
+            <div class="category-icon"><i class="fas fa-cogs"></i></div>
+            <h3 class="category-title">Automation &amp; AI Workflows</h3>
           </div>
           <div class="skills-tags">
-            <span class="skill-tag"><i class="fas fa-check"></i> Modular Architecture</span>
-            <span class="skill-tag"><i class="fas fa-shield-virus"></i> Security Best Practices</span>
-            <span class="skill-tag"><i class="fas fa-tachometer-alt"></i> Performance Audit</span>
-            <span class="skill-tag"><i class="fas fa-search"></i> Technical SEO</span>
+            <span class="skill-tag"><i class="fas fa-project-diagram" style="color: #FF6584;"></i> n8n Workflows</span>
+            <span class="skill-tag"><i class="fab fa-whatsapp" style="color: #25D366;"></i> WhatsApp Automation</span>
+            <span class="skill-tag"><i class="fas fa-infinity" style="color: #6F42C1;"></i> Make</span>
+            <span class="skill-tag"><i class="fas fa-robot"></i> AI Agents</span>
+            <span class="skill-tag"><i class="fas fa-plug"></i> API Integrations</span>
+            <span class="skill-tag"><i class="fas fa-sync-alt"></i> Webhooks &amp; Triggers</span>
           </div>
         </div>
       </div>
@@ -400,438 +411,687 @@
   <section id="services" class="services">
     <div class="container">
       <div class="section-header fade-in-up">
-        <span class="section-badge"><i class="fas fa-concierge-bell"></i> What I Offer</span>
-        <h2 class="section-title">Specialized Services for Modern Businesses</h2>
-        <p class="section-subtitle">Tailored digital solutions designed to increase efficiency, automate operations, and
-          boost client revenue.</p>
+        <span class="section-badge"><i class="fas fa-concierge-bell"></i> Services</span>
+        <h2 class="section-title">What I build.</h2>
+        <p class="section-subtitle">End-to-end AI applications, modern web platforms, and automated business workflows designed for measurable impact.</p>
       </div>
 
       <div class="services-grid">
-        <!-- 1. Website Development -->
+        <!-- 01 AI Solutions -->
         <div class="service-card fade-in-up">
+          <div class="service-number">01</div>
+          <div class="service-icon"><i class="fas fa-brain"></i></div>
+          <h3 class="service-title">AI Solutions</h3>
+          <p class="service-desc">AI-powered applications, NLP toxicity classifiers, intelligent conversational assistants, and custom Machine Learning pipelines.</p>
+        </div>
+
+        <!-- 02 Website Development -->
+        <div class="service-card fade-in-up">
+          <div class="service-number">02</div>
           <div class="service-icon"><i class="fas fa-laptop-code"></i></div>
           <h3 class="service-title">Website Development</h3>
-          <p class="service-desc">Custom high-performance websites built with semantic HTML5, modern CSS3, and vanilla
-            JS. Optimized for Lighthouse, mobile responsiveness, and high conversion rates.</p>
-          <ul class="service-features">
-            <li class="service-feature-item"><i class="fas fa-check"></i> Fast Page Speed (&lt;1s load)</li>
-            <li class="service-feature-item"><i class="fas fa-check"></i> Pixel-Perfect Responsive Design</li>
-            <li class="service-feature-item"><i class="fas fa-check"></i> SEO &amp; Accessibility Built-in</li>
-          </ul>
+          <p class="service-desc">Modern, fast, responsive and conversion-focused web platforms for growing businesses, startups, and professionals.</p>
         </div>
 
-        <!-- 2. Dashboard Development -->
+        <!-- 03 WhatsApp Automation -->
         <div class="service-card fade-in-up">
-          <div class="service-icon"><i class="fas fa-chart-pie"></i></div>
-          <h3 class="service-title">Dashboard Development</h3>
-          <p class="service-desc">Intuitive, data-rich admin and operational web dashboards for monitoring business
-            metrics, user permissions, analytics, and real-time operational feeds.</p>
-          <ul class="service-features">
-            <li class="service-feature-item"><i class="fas fa-check"></i> Real-time WebSockets &amp; Metrics</li>
-            <li class="service-feature-item"><i class="fas fa-check"></i> Role-Based Access Controls</li>
-            <li class="service-feature-item"><i class="fas fa-check"></i> Data Export &amp; Custom Filters</li>
-          </ul>
+          <div class="service-number">03</div>
+          <div class="service-icon"><i class="fab fa-whatsapp"></i></div>
+          <h3 class="service-title">WhatsApp Automation</h3>
+          <p class="service-desc">Automated customer communication workflows, lead qualification bots, instant order receipts, and 24/7 client follow-ups.</p>
         </div>
 
-        <!-- 3. Business Automation -->
+        <!-- 04 Workflow Automation -->
         <div class="service-card fade-in-up">
-          <div class="service-icon"><i class="fas fa-robot"></i></div>
-          <h3 class="service-title">Business Automation</h3>
-          <p class="service-desc">End-to-end process automation utilizing n8n, Gemini AI agents, and WhatsApp API to
-            handle lead qualification, customer notifications, and dataset syncing.</p>
-          <ul class="service-features">
-            <li class="service-feature-item"><i class="fas fa-check"></i> Automated WhatsApp Chatbots</li>
-            <li class="service-feature-item"><i class="fas fa-check"></i> Multi-App n8n Pipeline Workflows</li>
-            <li class="service-feature-item"><i class="fas fa-check"></i> AI Lead Qualification &amp; CRM Sync</li>
-          </ul>
-        </div>
-
-        <!-- 4. Restaurant Digital Solutions -->
-        <div class="service-card fade-in-up">
-          <div class="service-icon"><i class="fas fa-utensils"></i></div>
-          <h3 class="service-title">Restaurant Digital Solutions</h3>
-          <p class="service-desc">Complete restaurant operating technology—including contactless QR code menus, instant
-            WhatsApp ordering systems, and live kitchen display screens.</p>
-          <ul class="service-features">
-            <li class="service-feature-item"><i class="fas fa-check"></i> QR Contactless Menu &amp; Ordering</li>
-            <li class="service-feature-item"><i class="fas fa-check"></i> Live Kitchen Display System (KDS)</li>
-            <li class="service-feature-item"><i class="fas fa-check"></i> Automated Receipts via WhatsApp</li>
-          </ul>
-        </div>
-
-        <!-- 5. Hospital Systems -->
-        <div class="service-card fade-in-up">
-          <div class="service-icon"><i class="fas fa-hospital"></i></div>
-          <h3 class="service-title">Hospital Systems</h3>
-          <p class="service-desc">Secure healthcare management platforms for patient recordkeeping, doctor scheduling,
-            queue management, lab reports, and administrative oversight.</p>
-          <ul class="service-features">
-            <li class="service-feature-item"><i class="fas fa-check"></i> Patient EHR &amp; Appointment Queue</li>
-            <li class="service-feature-item"><i class="fas fa-check"></i> Doctor &amp; Staff Scheduling</li>
-            <li class="service-feature-item"><i class="fas fa-check"></i> Secure Billing &amp; Lab Reporting</li>
-          </ul>
-        </div>
-
-        <!-- 6. Custom Software Development -->
-        <div class="service-card fade-in-up">
+          <div class="service-number">04</div>
           <div class="service-icon"><i class="fas fa-cogs"></i></div>
-          <h3 class="service-title">Custom Software Development</h3>
-          <p class="service-desc">Bespoke full-stack web applications engineered with FastAPI, Python, and PostgreSQL
-            tailored to unique business workflow requirements.</p>
-          <ul class="service-features">
-            <li class="service-feature-item"><i class="fas fa-check"></i> Custom REST API Engineering</li>
-            <li class="service-feature-item"><i class="fas fa-check"></i> Database Modeling &amp; Migration</li>
-            <li class="service-feature-item"><i class="fas fa-check"></i> Scalable Dockerized Deployment</li>
-          </ul>
+          <h3 class="service-title">Workflow Automation</h3>
+          <p class="service-desc">Connecting tools, automating repetitive manual operations, and building intelligent n8n/Python business automation pipelines.</p>
+        </div>
+
+        <!-- 05 Lead Generation Systems -->
+        <div class="service-card fade-in-up">
+          <div class="service-number">05</div>
+          <div class="service-icon"><i class="fas fa-filter"></i></div>
+          <h3 class="service-title">Lead Generation Systems</h3>
+          <p class="service-desc">Digital conversion systems designed to capture, qualify, organize, and follow up with business leads automatically.</p>
+        </div>
+
+        <!-- 06 Custom Digital Solutions -->
+        <div class="service-card fade-in-up">
+          <div class="service-number">06</div>
+          <div class="service-icon"><i class="fas fa-cubes"></i></div>
+          <h3 class="service-title">Custom Digital Solutions</h3>
+          <p class="service-desc">Bespoke management systems, REST APIs, and software products designed around specific operational business requirements.</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ==================== PROJECTS SECTION ==================== -->
+  <!-- ==================== FEATURED PROJECTS SECTION (INFORMATION CARDS) ==================== -->
   <section id="projects" class="projects">
     <div class="container">
       <div class="section-header fade-in-up">
-        <span class="section-badge"><i class="fas fa-briefcase"></i> Featured Work</span>
-        <h2 class="section-title">Six Handcrafted Enterprise Projects</h2>
-        <p class="section-subtitle">Real-world applications built to demonstrate technical depth, architectural clarity,
-          and AI integration.</p>
+        <span class="section-badge"><i class="fas fa-briefcase"></i> Portfolio Showcase</span>
+        <h2 class="section-title">Things I've built.</h2>
+        <p class="section-subtitle">Real-world applications built across Artificial Intelligence, web development, and business automation.</p>
       </div>
 
       <div class="projects-grid">
-        <!-- Project 1: RestaurantOS -->
-        <div class="project-card fade-in-up">
-          <div class="project-preview">
-            <img src="images/restaurantos.jpg" alt="RestaurantOS Preview" class="project-img">
+        <!-- PROJECT 01: Social Media Abuse & Toxicity Detector -->
+        <div class="project-card project-info-card fade-in-up">
+          <div class="project-card-header">
+            <span class="project-number-badge">PROJECT 01</span>
+            <span class="project-category-badge">AI / NLP</span>
           </div>
-          <div class="project-content">
-            <div class="project-tech-badges">
-              <span class="tech-badge">HTML</span>
-              <span class="tech-badge">CSS</span>
-              <span class="tech-badge">JavaScript</span>
-              <span class="tech-badge">FastAPI</span>
-              <span class="tech-badge">PostgreSQL</span>
-              <span class="tech-badge">WhatsApp API</span>
-            </div>
-            <h3 class="project-title">RestaurantOS</h3>
-            <h4 class="project-subtitle">AI-powered Restaurant Management System</h4>
-            <p class="project-desc">A complete restaurant operating software uniting contactless dining, real-time
-              kitchen dispatching, and automated WhatsApp order updates.</p>
-            <div class="project-features-list">
-              <span class="feature-tag"><i class="fas fa-check-circle"></i> Restaurant Website</span>
-              <span class="feature-tag"><i class="fas fa-check-circle"></i> Admin Dashboard</span>
-              <span class="feature-tag"><i class="fas fa-check-circle"></i> Kitchen Dashboard</span>
-              <span class="feature-tag"><i class="fas fa-check-circle"></i> WhatsApp Orders</span>
-              <span class="feature-tag"><i class="fas fa-check-circle"></i> QR Menu System</span>
-              <span class="feature-tag"><i class="fas fa-check-circle"></i> Revenue Analytics</span>
-            </div>
-            <div class="project-actions">
-              <a href="https://github.com" target="_blank" class="btn btn-secondary btn-card"><i
-                  class="fab fa-github"></i> GitHub</a>
-              <a href="#" class="btn btn-primary btn-card"><i class="fas fa-external-link-alt"></i> Live Demo</a>
-              <button class="btn btn-secondary btn-card btn-case-study" data-project="restaurantos"><i
-                  class="fas fa-book-open"></i> Case Study</button>
-            </div>
-          </div>
-        </div>
 
-        <!-- Project 2: Teja Chest Hospital -->
-        <div class="project-card fade-in-up">
-          <div class="project-preview">
-            <img src="images/tejachest.png" alt="Teja Chest Hospital Management System" class="project-img">
-          </div>
-          <div class="project-content">
+          <div class="project-card-body">
+            <h3 class="project-title">Social Media Abuse &amp; Toxicity Detector</h3>
+            <p class="project-desc">An AI-powered system designed to identify abusive and toxic social-media content using Natural Language Processing and fine-tuned PyTorch transformer models.</p>
+            
+            <div class="project-highlights-grid">
+              <div class="highlight-item">
+                <i class="fas fa-check-circle highlight-icon"></i>
+                <span>94%+ Classification Accuracy</span>
+              </div>
+              <div class="highlight-item">
+                <i class="fas fa-bolt highlight-icon"></i>
+                <span>&lt;150ms Low-Latency FastAPI</span>
+              </div>
+              <div class="highlight-item">
+                <i class="fas fa-shield-halved highlight-icon"></i>
+                <span>Multi-Class Abuse Filtering</span>
+              </div>
+            </div>
+
             <div class="project-tech-badges">
-              <span class="tech-badge">HTML5</span>
-              <span class="tech-badge">CSS3</span>
-              <span class="tech-badge">JavaScript</span>
               <span class="tech-badge">Python</span>
               <span class="tech-badge">FastAPI</span>
-              <span class="tech-badge">SQLite</span>
+              <span class="tech-badge">Hugging Face</span>
+              <span class="tech-badge">NLP</span>
+              <span class="tech-badge">PyTorch</span>
+              <span class="tech-badge">JavaScript</span>
             </div>
-            <h3 class="project-title">Teja Chest Hospital</h3>
-            <h4 class="project-subtitle">Hospital Management System</h4>
-            <p class="project-desc">Comprehensive medical portal designed for managing patient records, doctor
-              consultations, appointment queues, and hospital metrics.</p>
-            <div class="project-features-list">
-              <span class="feature-tag"><i class="fas fa-check-circle"></i> Patient Records</span>
-              <span class="feature-tag"><i class="fas fa-check-circle"></i> Appointments</span>
-              <span class="feature-tag"><i class="fas fa-check-circle"></i> Doctor Dashboard</span>
-              <span class="feature-tag"><i class="fas fa-check-circle"></i> Admin Dashboard</span>
-              <span class="feature-tag"><i class="fas fa-check-circle"></i> Medical Reports</span>
-              <span class="feature-tag"><i class="fas fa-check-circle"></i> Queue Management</span>
-            </div>
-            <div class="project-actions">
-              <a href="https://github.com" target="_blank" class="btn btn-secondary btn-card"><i
-                  class="fab fa-github"></i> GitHub</a>
-              <a href="#" class="btn btn-primary btn-card"><i class="fas fa-external-link-alt"></i> Live Demo</a>
-              <button class="btn btn-secondary btn-card btn-case-study" data-project="auracare"><i
-                  class="fas fa-book-open"></i> Case Study</button>
-            </div>
+          </div>
+
+          <div class="project-card-footer">
+            <button class="btn btn-primary btn-card btn-case-study" data-project="toxicity_detector">
+              <span>View Details <i class="fas fa-arrow-right icon-shift"></i></span>
+            </button>
+            <a href="https://github.com/venkatpraveen06" target="_blank" class="btn btn-secondary btn-card">
+              <i class="fab fa-github"></i> GitHub
+            </a>
           </div>
         </div>
 
-        <!-- Project 3: Ramanujan Academy -->
-        <div class="project-card fade-in-up">
-          <div class="project-preview">
-            <img src="images/ramanujan.png" alt="Ramanujan Academy Education Portal" class="project-img">
+        <!-- PROJECT 02: Victory Vault -->
+        <div class="project-card project-info-card fade-in-up">
+          <div class="project-card-header">
+            <span class="project-number-badge">PROJECT 02</span>
+            <span class="project-category-badge">Web Application</span>
           </div>
-          <div class="project-content">
+
+          <div class="project-card-body">
+            <h3 class="project-title">Victory Vault</h3>
+            <p class="project-desc">A gaming tournament management platform designed to organize esports competitions, participant rosters, automated bracket logic, and tournament workflows.</p>
+            
+            <div class="project-highlights-grid">
+              <div class="highlight-item">
+                <i class="fas fa-sitemap highlight-icon"></i>
+                <span>Automated Bracket Engine</span>
+              </div>
+              <div class="highlight-item">
+                <i class="fas fa-trophy highlight-icon"></i>
+                <span>Live Leaderboard Updates</span>
+              </div>
+              <div class="highlight-item">
+                <i class="fas fa-users highlight-icon"></i>
+                <span>Esports Team Management</span>
+              </div>
+            </div>
+
+            <div class="project-tech-badges">
+              <span class="tech-badge">JavaScript</span>
+              <span class="tech-badge">HTML5</span>
+              <span class="tech-badge">CSS3</span>
+              <span class="tech-badge">React/Vite</span>
+              <span class="tech-badge">MongoDB</span>
+            </div>
+          </div>
+
+          <div class="project-card-footer">
+            <button class="btn btn-primary btn-card btn-case-study" data-project="victory_vault">
+              <span>View Details <i class="fas fa-arrow-right icon-shift"></i></span>
+            </button>
+            <a href="https://github.com/venkatpraveen06" target="_blank" class="btn btn-secondary btn-card">
+              <i class="fab fa-github"></i> GitHub
+            </a>
+          </div>
+        </div>
+
+        <!-- PROJECT 03: AI Conversational Agent -->
+        <div class="project-card project-info-card fade-in-up">
+          <div class="project-card-header">
+            <span class="project-number-badge">PROJECT 03</span>
+            <span class="project-category-badge">Artificial Intelligence</span>
+          </div>
+
+          <div class="project-card-body">
+            <h3 class="project-title">AI Conversational Agent</h3>
+            <p class="project-desc">A context-aware conversational AI system designed to understand complex user queries and provide accurate, intelligent multi-turn responses with memory.</p>
+            
+            <div class="project-highlights-grid">
+              <div class="highlight-item">
+                <i class="fas fa-brain highlight-icon"></i>
+                <span>Multi-Turn Context Memory</span>
+              </div>
+              <div class="highlight-item">
+                <i class="fas fa-database highlight-icon"></i>
+                <span>Vector RAG Pipeline</span>
+              </div>
+              <div class="highlight-item">
+                <i class="fas fa-robot highlight-icon"></i>
+                <span>Gemini API &amp; Hugging Face</span>
+              </div>
+            </div>
+
+            <div class="project-tech-badges">
+              <span class="tech-badge">Python</span>
+              <span class="tech-badge">NLP</span>
+              <span class="tech-badge">AI</span>
+              <span class="tech-badge">FastAPI</span>
+              <span class="tech-badge">Hugging Face</span>
+              <span class="tech-badge">Gemini API</span>
+            </div>
+          </div>
+
+          <div class="project-card-footer">
+            <button class="btn btn-primary btn-card btn-case-study" data-project="ai_agent">
+              <span>View Details <i class="fas fa-arrow-right icon-shift"></i></span>
+            </button>
+            <a href="https://github.com/venkatpraveen06" target="_blank" class="btn btn-secondary btn-card">
+              <i class="fab fa-github"></i> GitHub
+            </a>
+          </div>
+        </div>
+
+        <!-- PROJECT 04: Hostel Management System -->
+        <div class="project-card project-info-card fade-in-up">
+          <div class="project-card-header">
+            <span class="project-number-badge">PROJECT 04</span>
+            <span class="project-category-badge">Management System</span>
+          </div>
+
+          <div class="project-card-body">
+            <h3 class="project-title">Hostel Management System</h3>
+            <p class="project-desc">A digital hostel management solution with student management, interactive room allocation matrices, recurring fee tracking, maintenance tickets and administrative logs.</p>
+            
+            <div class="project-highlights-grid">
+              <div class="highlight-item">
+                <i class="fas fa-bed highlight-icon"></i>
+                <span>Interactive Room Matrix</span>
+              </div>
+              <div class="highlight-item">
+                <i class="fas fa-receipt highlight-icon"></i>
+                <span>Fee Tracking &amp; Auto Alert</span>
+              </div>
+              <div class="highlight-item">
+                <i class="fas fa-ticket highlight-icon"></i>
+                <span>Grievance Ticketing System</span>
+              </div>
+            </div>
+
             <div class="project-tech-badges">
               <span class="tech-badge">HTML5</span>
               <span class="tech-badge">CSS3</span>
               <span class="tech-badge">JavaScript</span>
-              <span class="tech-badge">REST APIs</span>
+              <span class="tech-badge">FastAPI</span>
+              <span class="tech-badge">SQLite</span>
+            </div>
+          </div>
+
+          <div class="project-card-footer">
+            <button class="btn btn-primary btn-card btn-case-study" data-project="hostel_system">
+              <span>View Details <i class="fas fa-arrow-right icon-shift"></i></span>
+            </button>
+            <a href="https://github.com/venkatpraveen06" target="_blank" class="btn btn-secondary btn-card">
+              <i class="fab fa-github"></i> GitHub
+            </a>
+          </div>
+        </div>
+
+        <!-- PROJECT 05: Real-Time Quiz System -->
+        <div class="project-card project-info-card fade-in-up">
+          <div class="project-card-header">
+            <span class="project-number-badge">PROJECT 05</span>
+            <span class="project-category-badge">Web Application</span>
+          </div>
+
+          <div class="project-card-body">
+            <h3 class="project-title">Real-Time Quiz System</h3>
+            <p class="project-desc">A real-time online testing application with server-side timed questions, randomized question bank distribution, PostgreSQL database storage and score analytics.</p>
+            
+            <div class="project-highlights-grid">
+              <div class="highlight-item">
+                <i class="fas fa-clock highlight-icon"></i>
+                <span>Server-Side Timed Engine</span>
+              </div>
+              <div class="highlight-item">
+                <i class="fas fa-shuffle highlight-icon"></i>
+                <span>Randomized Question Bank</span>
+              </div>
+              <div class="highlight-item">
+                <i class="fas fa-chart-bar highlight-icon"></i>
+                <span>Instant Score Analytics</span>
+              </div>
+            </div>
+
+            <div class="project-tech-badges">
+              <span class="tech-badge">Python</span>
+              <span class="tech-badge">Flask</span>
+              <span class="tech-badge">PostgreSQL</span>
+              <span class="tech-badge">HTML5</span>
+              <span class="tech-badge">CSS3</span>
+              <span class="tech-badge">JavaScript</span>
+            </div>
+          </div>
+
+          <div class="project-card-footer">
+            <button class="btn btn-primary btn-card btn-case-study" data-project="realtime_quiz">
+              <span>View Details <i class="fas fa-arrow-right icon-shift"></i></span>
+            </button>
+            <a href="https://github.com/venkatpraveen06" target="_blank" class="btn btn-secondary btn-card">
+              <i class="fab fa-github"></i> GitHub
+            </a>
+          </div>
+        </div>
+
+        <!-- PROJECT 06: WhatsApp Business Automation -->
+        <div class="project-card project-info-card fade-in-up">
+          <div class="project-card-header">
+            <span class="project-number-badge">PROJECT 06</span>
+            <span class="project-category-badge">Business Automation</span>
+          </div>
+
+          <div class="project-card-body">
+            <h3 class="project-title">WhatsApp Business Automation</h3>
+            <p class="project-desc">An automated customer communication workflow designed to handle business enquiries, instant auto-replies, lead qualification, and Supabase CRM record syncing.</p>
+            
+            <div class="project-highlights-grid">
+              <div class="highlight-item">
+                <i class="fab fa-whatsapp highlight-icon"></i>
+                <span>Instant &lt;5s Auto-Replies</span>
+              </div>
+              <div class="highlight-item">
+                <i class="fas fa-filter highlight-icon"></i>
+                <span>AI Lead Qualification</span>
+              </div>
+              <div class="highlight-item">
+                <i class="fas fa-sync highlight-icon"></i>
+                <span>Supabase CRM Sync 24/7</span>
+              </div>
+            </div>
+
+            <div class="project-tech-badges">
+              <span class="tech-badge">n8n</span>
+              <span class="tech-badge">WhatsApp API</span>
+              <span class="tech-badge">Automation</span>
+              <span class="tech-badge">AI</span>
               <span class="tech-badge">Supabase</span>
             </div>
-            <h3 class="project-title">Ramanujan Academy</h3>
-            <h4 class="project-subtitle">Education Management Portal</h4>
-            <p class="project-desc">Full-featured EdTech portal for student admissions, course progress tracking,
-              attendance logging, and automated fee collections.</p>
-            <div class="project-features-list">
-              <span class="feature-tag"><i class="fas fa-check-circle"></i> Admissions Portal</span>
-              <span class="feature-tag"><i class="fas fa-check-circle"></i> Student Dashboard</span>
-              <span class="feature-tag"><i class="fas fa-check-circle"></i> Faculty Dashboard</span>
-              <span class="feature-tag"><i class="fas fa-check-circle"></i> Fee Management</span>
-              <span class="feature-tag"><i class="fas fa-check-circle"></i> Attendance System</span>
-              <span class="feature-tag"><i class="fas fa-check-circle"></i> Grade Reports</span>
-            </div>
-            <div class="project-actions">
-              <a href="https://github.com" target="_blank" class="btn btn-secondary btn-card"><i
-                  class="fab fa-github"></i> GitHub</a>
-              <a href="#" class="btn btn-primary btn-card"><i class="fas fa-external-link-alt"></i> Live Demo</a>
-              <button class="btn btn-secondary btn-card btn-case-study" data-project="ramanujan"><i
-                  class="fas fa-book-open"></i> Case Study</button>
-            </div>
           </div>
-        </div>
 
-        <!-- Project 4: The Prism Interiors -->
-        <div class="project-card fade-in-up">
-          <div class="project-preview">
-            <img src="images/prisminteriors.png" alt="The Prism Interiors Platform" class="project-img">
-          </div>
-          <div class="project-content">
-            <div class="project-tech-badges">
-              <span class="tech-badge">HTML5</span>
-              <span class="tech-badge">CSS3 (Grid)</span>
-              <span class="tech-badge">Vanilla JS</span>
-              <span class="tech-badge">SEO</span>
-              <span class="tech-badge">Vercel</span>
-            </div>
-            <h3 class="project-title">The Prism Interiors</h3>
-            <h4 class="project-subtitle">Interior Design Portfolio Platform</h4>
-            <p class="project-desc">A premium architectural design showcase featuring dynamic project filtering, client
-              consultation booking, and ultra-fast visual rendering.</p>
-            <div class="project-features-list">
-              <span class="feature-tag"><i class="fas fa-check-circle"></i> Project Gallery</span>
-              <span class="feature-tag"><i class="fas fa-check-circle"></i> Lead Forms</span>
-              <span class="feature-tag"><i class="fas fa-check-circle"></i> Service Pages</span>
-              <span class="feature-tag"><i class="fas fa-check-circle"></i> Client Testimonials</span>
-              <span class="feature-tag"><i class="fas fa-check-circle"></i> Responsive Design</span>
-              <span class="feature-tag"><i class="fas fa-check-circle"></i> Consultation Booker</span>
-            </div>
-            <div class="project-actions">
-              <a href="https://github.com" target="_blank" class="btn btn-secondary btn-card"><i
-                  class="fab fa-github"></i> GitHub</a>
-              <a href="#" class="btn btn-primary btn-card"><i class="fas fa-external-link-alt"></i> Live Demo</a>
-              <button class="btn btn-secondary btn-card btn-case-study" data-project="interior"><i
-                  class="fas fa-book-open"></i> Case Study</button>
-            </div>
-          </div>
-        </div>
-
-        <!-- Project 5: Smart Hostel -->
-        <div class="project-card fade-in-up">
-          <div class="project-preview">
-            <img src="images/smarthostel.png" alt="Smart Hostel System" class="project-img">
-          </div>
-          <div class="project-content">
-            <div class="project-tech-badges">
-              <span class="tech-badge">HTML5</span>
-              <span class="tech-badge">CSS3</span>
-              <span class="tech-badge">JavaScript</span>
-              <span class="tech-badge">FastAPI</span>
-              <span class="tech-badge">SQLite</span>
-            </div>
-            <h3 class="project-title">Smart Hostel</h3>
-            <h4 class="project-subtitle">Hostel Management System</h4>
-            <p class="project-desc">Operational lodging platform for automated room allocation matrices, recurring rent
-              tracking, maintenance complaints, and student profiles.</p>
-            <div class="project-features-list">
-              <span class="feature-tag"><i class="fas fa-check-circle"></i> Room Allocation</span>
-              <span class="feature-tag"><i class="fas fa-check-circle"></i> Fee Tracking</span>
-              <span class="feature-tag"><i class="fas fa-check-circle"></i> Maintenance Complaints</span>
-              <span class="feature-tag"><i class="fas fa-check-circle"></i> Financial Reports</span>
-              <span class="feature-tag"><i class="fas fa-check-circle"></i> Student Portal</span>
-              <span class="feature-tag"><i class="fas fa-check-circle"></i> Occupancy Matrix</span>
-            </div>
-            <div class="project-actions">
-              <a href="https://github.com" target="_blank" class="btn btn-secondary btn-card"><i
-                  class="fab fa-github"></i> GitHub</a>
-              <a href="#" class="btn btn-primary btn-card"><i class="fas fa-external-link-alt"></i> Live Demo</a>
-              <button class="btn btn-secondary btn-card btn-case-study" data-project="smarthostel"><i
-                  class="fas fa-book-open"></i> Case Study</button>
-            </div>
-          </div>
-        </div>
-
-        <!-- Project 6: Balaramayya Supermarket -->
-        <div class="project-card fade-in-up">
-          <div class="project-preview">
-            <img src="images/balaramayya.png" alt="Balaramayya Supermarket Platform" class="project-img">
-          </div>
-          <div class="project-content">
-            <div class="project-tech-badges">
-              <span class="tech-badge">HTML5</span>
-              <span class="tech-badge">CSS3</span>
-              <span class="tech-badge">JavaScript</span>
-              <span class="tech-badge">FastAPI</span>
-              <span class="tech-badge">PostgreSQL</span>
-              <span class="tech-badge">WhatsApp API</span>
-            </div>
-            <h3 class="project-title">Balaramayya Supermarket</h3>
-            <h4 class="project-subtitle">E-Commerce &amp; Retail Platform</h4>
-            <p class="project-desc">A premium wholesale and retail supermarket web platform for fresh produce, pantry
-              staples, daily essentials, fast local delivery scheduling, and inventory analytics.</p>
-            <div class="project-features-list">
-              <span class="feature-tag"><i class="fas fa-check-circle"></i> Online Storefront</span>
-              <span class="feature-tag"><i class="fas fa-check-circle"></i> 30-Min Fast Delivery</span>
-              <span class="feature-tag"><i class="fas fa-check-circle"></i> Wholesale &amp; Retail</span>
-              <span class="feature-tag"><i class="fas fa-check-circle"></i> Inventory Analytics</span>
-              <span class="feature-tag"><i class="fas fa-check-circle"></i> WhatsApp Orders</span>
-              <span class="feature-tag"><i class="fas fa-check-circle"></i> Flash Sale Engine</span>
-            </div>
-            <div class="project-actions">
-              <a href="https://github.com" target="_blank" class="btn btn-secondary btn-card"><i
-                  class="fab fa-github"></i> GitHub</a>
-              <a href="https://supermarket2026.vercel.app" class="btn btn-primary btn-card"><i
-                  class="fas fa-external-link-alt"></i> Live Demo</a>
-              <button class="btn btn-secondary btn-card btn-case-study" data-project="businessflow"><i
-                  class="fas fa-book-open"></i> Case Study</button>
-            </div>
+          <div class="project-card-footer">
+            <button class="btn btn-primary btn-card btn-case-study" data-project="whatsapp_automation">
+              <span>View Details <i class="fas fa-arrow-right icon-shift"></i></span>
+            </button>
+            <a href="https://github.com/venkatpraveen06" target="_blank" class="btn btn-secondary btn-card">
+              <i class="fab fa-github"></i> GitHub
+            </a>
           </div>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ==================== DEVELOPMENT PROCESS SECTION ==================== -->
-  <section id="experience" class="process">
+  <!-- ==================== FLOWGEN DEDICATED SECTION ==================== -->
+  <section id="flowgen" class="flowgen-section">
     <div class="container">
       <div class="section-header fade-in-up">
-        <span class="section-badge"><i class="fas fa-stream"></i> Engineering Workflow</span>
-        <h2 class="section-title">My Development Process</h2>
-        <p class="section-subtitle">A structured, 6-phase engineering lifecycle that guarantees high quality, speed, and
-          continuous support.</p>
+        <span class="section-badge"><i class="fas fa-rocket"></i> Entrepreneurial Venture</span>
+        <h2 class="section-title">Building Flowgen.</h2>
+        <p class="section-subtitle">Turning business problems into automated digital systems.</p>
       </div>
 
-      <div class="process-timeline fade-in-up">
-        <!-- Step 1 -->
-        <div class="process-step">
-          <div class="step-number-node">01</div>
-          <h3 class="step-title">Understand</h3>
-          <p class="step-desc">Discovery call, business goals mapping, target audience analysis, and requirement
-            framing.</p>
+      <div class="flowgen-narrative-card fade-in-up">
+        <p class="flowgen-main-desc">
+          <strong>Flowgen</strong> is my entrepreneurial initiative focused on helping businesses improve their online presence, generate more qualified leads, and automate customer communication.
+        </p>
+
+        <div class="flowgen-three-grid">
+          <div class="flowgen-card">
+            <div class="flowgen-card-icon"><i class="fas fa-laptop-code"></i></div>
+            <h3 class="flowgen-card-title">Websites</h3>
+            <p class="flowgen-card-desc">Build a stronger digital presence with modern, ultra-fast conversion-driven web applications.</p>
+          </div>
+
+          <div class="flowgen-card">
+            <div class="flowgen-card-icon"><i class="fas fa-cogs"></i></div>
+            <h3 class="flowgen-card-title">Automation</h3>
+            <p class="flowgen-card-desc">Reduce repetitive manual operations using intelligent n8n workflows and AI chatbots.</p>
+          </div>
+
+          <div class="flowgen-card">
+            <div class="flowgen-card-icon"><i class="fas fa-bullseye"></i></div>
+            <h3 class="flowgen-card-title">Lead Generation</h3>
+            <p class="flowgen-card-desc">Turn online visitor attention into organized, qualified enquiries automatically 24/7.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Animated Flowgen Business Diagram -->
+      <div class="flowgen-diagram-card fade-in-up">
+        <h3 class="diagram-title"><i class="fas fa-project-diagram"></i> How Flowgen Transforms Business Workflows</h3>
+        
+        <div class="diagram-workflow-grid">
+          <div class="diagram-node" data-step="1">
+            <div class="node-icon"><i class="fas fa-user"></i></div>
+            <div class="node-label">Customer</div>
+          </div>
+          <div class="diagram-arrow"><i class="fas fa-chevron-right"></i></div>
+
+          <div class="diagram-node" data-step="2">
+            <div class="node-icon"><i class="fas fa-globe"></i></div>
+            <div class="node-label">Website</div>
+          </div>
+          <div class="diagram-arrow"><i class="fas fa-chevron-right"></i></div>
+
+          <div class="diagram-node" data-step="3">
+            <div class="node-icon"><i class="fas fa-filter"></i></div>
+            <div class="node-label">Lead</div>
+          </div>
+          <div class="diagram-arrow"><i class="fas fa-chevron-right"></i></div>
+
+          <div class="diagram-node" data-step="4">
+            <div class="node-icon"><i class="fab fa-whatsapp"></i></div>
+            <div class="node-label">WhatsApp</div>
+          </div>
+          <div class="diagram-arrow"><i class="fas fa-chevron-right"></i></div>
+
+          <div class="diagram-node" data-step="5">
+            <div class="node-icon"><i class="fas fa-robot"></i></div>
+            <div class="node-label">Automation</div>
+          </div>
+          <div class="diagram-arrow"><i class="fas fa-chevron-right"></i></div>
+
+          <div class="diagram-node" data-step="6">
+            <div class="node-icon"><i class="fas fa-chart-line"></i></div>
+            <div class="node-label">Business Growth</div>
+          </div>
         </div>
 
-        <!-- Step 2 -->
-        <div class="process-step">
-          <div class="step-number-node">02</div>
-          <h3 class="step-title">Design</h3>
-          <p class="step-desc">UI/UX wireframing, architecture blueprinting, database schema design, and API design.</p>
-        </div>
-
-        <!-- Step 3 -->
-        <div class="process-step">
-          <div class="step-number-node">03</div>
-          <h3 class="step-title">Develop</h3>
-          <p class="step-desc">Writing clean, modular frontend code and resilient FastAPI/Python backend services.</p>
-        </div>
-
-        <!-- Step 4 -->
-        <div class="process-step">
-          <div class="step-number-node">04</div>
-          <h3 class="step-title">Test</h3>
-          <p class="step-desc">Rigorous cross-browser testing, mobile responsiveness audit, Lighthouse score
-            verification.</p>
-        </div>
-
-        <!-- Step 5 -->
-        <div class="process-step">
-          <div class="step-number-node">05</div>
-          <h3 class="step-title">Deploy</h3>
-          <p class="step-desc">Automated CI/CD pipelines, SSL certificate setup, and deployment to Docker/Vercel/Render.
-          </p>
-        </div>
-
-        <!-- Step 6 -->
-        <div class="process-step">
-          <div class="step-number-node">06</div>
-          <h3 class="step-title">Support</h3>
-          <p class="step-desc">Ongoing monitoring, performance tuning, security updates, and scaling consultations.</p>
+        <div class="flowgen-cta-wrapper">
+          <a href="#contact" class="btn btn-primary btn-draw">
+            <span>Explore Flowgen <i class="fas fa-arrow-right icon-shift"></i></span>
+          </a>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- ==================== ACHIEVEMENTS SECTION ==================== -->
+  <!-- ==================== JOURNEY / TIMELINE SECTION ==================== -->
+  <section id="journey" class="journey-section">
+    <div class="container">
+      <div class="section-header fade-in-up">
+        <span class="section-badge"><i class="fas fa-stream"></i> Milestone Track</span>
+        <h2 class="section-title">My journey so far.</h2>
+        <p class="section-subtitle">A timeline of learning, building real-world software, and founding Flowgen.</p>
+      </div>
+
+      <div class="timeline-wrapper">
+        <div class="timeline-line" id="timelineLine"></div>
+
+        <div class="timeline-item fade-in-up">
+          <div class="timeline-node">2023</div>
+          <div class="timeline-card">
+            <span class="timeline-year-badge">2023</span>
+            <h3 class="timeline-title">Started B.Tech CSE</h3>
+            <p class="timeline-desc">Enrolled in Computer Science &amp; Engineering at KL Deemed to be University, focusing on core programming, Data Structures, and Algorithms.</p>
+          </div>
+        </div>
+
+        <div class="timeline-item fade-in-up">
+          <div class="timeline-node">2024</div>
+          <div class="timeline-card">
+            <span class="timeline-year-badge">2024</span>
+            <h3 class="timeline-title">Explored Web Development &amp; Programming</h3>
+            <p class="timeline-desc">Mastered JavaScript, Python, database modeling, and full-stack architectures by building practical web software.</p>
+          </div>
+        </div>
+
+        <div class="timeline-item fade-in-up">
+          <div class="timeline-node">2025</div>
+          <div class="timeline-card">
+            <span class="timeline-year-badge">2025</span>
+            <h3 class="timeline-title">Moved Deeper into AI, NLP &amp; Machine Learning</h3>
+            <p class="timeline-desc">Specialized in AI-Driven Language Technologies, building NLP toxicity classifiers, PyTorch models, and Gemini RAG pipelines.</p>
+          </div>
+        </div>
+
+        <div class="timeline-item fade-in-up">
+          <div class="timeline-node">2026</div>
+          <div class="timeline-card">
+            <span class="timeline-year-badge">2026</span>
+            <h3 class="timeline-title">Building AI Projects + Business Automation</h3>
+            <p class="timeline-desc">Engineered WhatsApp automation systems, n8n workflow pipelines, and custom management platforms.</p>
+          </div>
+        </div>
+
+        <div class="timeline-item fade-in-up">
+          <div class="timeline-node">2026</div>
+          <div class="timeline-card">
+            <span class="timeline-year-badge">2026</span>
+            <h3 class="timeline-title">Building Flowgen &amp; Client Solutions</h3>
+            <p class="timeline-desc">Founded Flowgen to provide conversion-focused websites, automated lead capture, and digital operations for businesses.</p>
+          </div>
+        </div>
+
+        <div class="timeline-item fade-in-up">
+          <div class="timeline-node">2027</div>
+          <div class="timeline-card">
+            <span class="timeline-year-badge">2027</span>
+            <h3 class="timeline-title">AI Engineer / Software Engineer Career</h3>
+            <p class="timeline-desc">Graduating B.Tech CSE and launching a high-impact career creating intelligent digital products.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== EDUCATION & CURRENT FOCUS ==================== -->
+  <section class="education-focus-section">
+    <div class="container">
+      <div class="edu-grid">
+        <!-- Education Academic Card -->
+        <div class="edu-card fade-in-up">
+          <div class="edu-card-badge"><i class="fas fa-graduation-cap"></i> Academic Degree</div>
+          <h3 class="edu-degree">B.Tech – Computer Science &amp; Engineering</h3>
+          <div class="edu-specialization">Specialization in AI-Driven Language Technologies</div>
+          <div class="edu-institution"><i class="fas fa-university"></i> KL Deemed to be University</div>
+          <div class="edu-years"><i class="far fa-calendar-alt"></i> 2023 – 2027</div>
+
+          <h4 class="edu-focus-title">Focus Areas:</h4>
+          <div class="edu-tags-wrapper">
+            <span class="edu-tag">Artificial Intelligence</span>
+            <span class="edu-tag">Machine Learning</span>
+            <span class="edu-tag">Natural Language Processing</span>
+            <span class="edu-tag">Data Structures &amp; Algorithms</span>
+            <span class="edu-tag">Cloud Computing</span>
+            <span class="edu-tag">Web Technologies</span>
+          </div>
+        </div>
+
+        <!-- Current Focus Card -->
+        <div class="focus-card fade-in-up">
+          <div class="edu-card-badge"><i class="fas fa-crosshairs"></i> Current Direction</div>
+          <h3 class="edu-degree">What I'm focused on now.</h3>
+
+          <div class="focus-list">
+            <div class="focus-item">
+              <div class="focus-item-header">
+                <span class="focus-name"><i class="fas fa-brain"></i> AI Engineering</span>
+                <span class="focus-percent">95%</span>
+              </div>
+              <p class="focus-desc">Building practical AI applications, LLM agents, and NLP models.</p>
+              <div class="focus-progress-track"><div class="focus-progress-bar" style="width: 95%;"></div></div>
+            </div>
+
+            <div class="focus-item">
+              <div class="focus-item-header">
+                <span class="focus-name"><i class="fas fa-code"></i> Software Engineering</span>
+                <span class="focus-percent">92%</span>
+              </div>
+              <p class="focus-desc">Writing scalable, resilient, and maintainable software architectures.</p>
+              <div class="focus-progress-track"><div class="focus-progress-bar" style="width: 92%;"></div></div>
+            </div>
+
+            <div class="focus-item">
+              <div class="focus-item-header">
+                <span class="focus-name"><i class="fas fa-robot"></i> Business Automation</span>
+                <span class="focus-percent">90%</span>
+              </div>
+              <p class="focus-desc">Creating intelligent n8n workflows and automated WhatsApp communication.</p>
+              <div class="focus-progress-track"><div class="focus-progress-bar" style="width: 90%;"></div></div>
+            </div>
+
+            <div class="focus-item">
+              <div class="focus-item-header">
+                <span class="focus-name"><i class="fas fa-rocket"></i> Entrepreneurship</span>
+                <span class="focus-percent">88%</span>
+              </div>
+              <p class="focus-desc">Growing Flowgen and solving real business operational bottlenecks.</p>
+              <div class="focus-progress-track"><div class="focus-progress-bar" style="width: 88%;"></div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== BLOG SECTION ==================== -->
+  <section class="blog-section">
+    <div class="container">
+      <div class="section-header fade-in-up">
+        <span class="section-badge"><i class="fas fa-newspaper"></i> Articles</span>
+        <h2 class="section-title">Ideas, experiments &amp; lessons.</h2>
+        <p class="section-subtitle">Thought leadership and practical engineering guides published under TechPlus Article.</p>
+      </div>
+
+      <div class="blog-grid">
+        <div class="blog-card fade-in-up">
+          <div class="blog-meta">
+            <span class="blog-badge">TechPlus Article</span>
+            <span class="blog-date">6 min read</span>
+          </div>
+          <h3 class="blog-title">Building AI Applications with Python</h3>
+          <p class="blog-excerpt">A practical guide to connecting FastAPI, Hugging Face NLP transformers, and vector databases for real-world production setups.</p>
+          <a href="#contact" class="blog-link">Read Article <i class="fas fa-arrow-right"></i></a>
+        </div>
+
+        <div class="blog-card fade-in-up">
+          <div class="blog-meta">
+            <span class="blog-badge">TechPlus Article</span>
+            <span class="blog-date">5 min read</span>
+          </div>
+          <h3 class="blog-title">How WhatsApp Automation Can Transform Small Businesses</h3>
+          <p class="blog-excerpt">Why automated reply workflows and n8n lead qualification reduce response latency from hours to seconds.</p>
+          <a href="#contact" class="blog-link">Read Article <i class="fas fa-arrow-right"></i></a>
+        </div>
+
+        <div class="blog-card fade-in-up">
+          <div class="blog-meta">
+            <span class="blog-badge">TechPlus Article</span>
+            <span class="blog-date">8 min read</span>
+          </div>
+          <h3 class="blog-title">Understanding NLP in Real-World Applications</h3>
+          <p class="blog-excerpt">From toxicity classification to multi-turn intent detection: insights from building NLP models for social media.</p>
+          <a href="#contact" class="blog-link">Read Article <i class="fas fa-arrow-right"></i></a>
+        </div>
+
+        <div class="blog-card fade-in-up">
+          <div class="blog-meta">
+            <span class="blog-badge">TechPlus Article</span>
+            <span class="blog-date">7 min read</span>
+          </div>
+          <h3 class="blog-title">From Student Developer to AI Engineer</h3>
+          <p class="blog-excerpt">Key milestones, projects, and mindset shifts necessary to transition from academic coding to production engineering.</p>
+          <a href="#contact" class="blog-link">Read Article <i class="fas fa-arrow-right"></i></a>
+        </div>
+
+        <div class="blog-card fade-in-up">
+          <div class="blog-meta">
+            <span class="blog-badge">TechPlus Article</span>
+            <span class="blog-date">5 min read</span>
+          </div>
+          <h3 class="blog-title">How Businesses Can Automate Lead Follow-Ups</h3>
+          <p class="blog-excerpt">Setting up 24/7 automated follow-up sequences using webhooks, Supabase CRM, and AI lead scoring.</p>
+          <a href="#contact" class="blog-link">Read Article <i class="fas fa-arrow-right"></i></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== PERSONAL BRAND & STATEMENT ==================== -->
+  <section class="brand-statement-section">
+    <div class="container">
+      <div class="statement-card fade-in-up">
+        <div class="statement-quote-icon"><i class="fas fa-quote-left"></i></div>
+        <h2 class="statement-title">
+          I don't just want to write code.<br>
+          <span class="gradient-text-accent">I want to build things people actually use.</span>
+        </h2>
+        <div class="statement-badges-wrapper">
+          <span class="statement-pill">AI</span>
+          <span class="statement-pill">Software</span>
+          <span class="statement-pill">Automation</span>
+          <span class="statement-pill">Entrepreneurship</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== ACHIEVEMENTS & CERTIFICATIONS ==================== -->
   <section class="achievements">
     <div class="container">
       <div class="section-header fade-in-up">
-        <span class="section-badge"><i class="fas fa-trophy"></i> Core Competencies</span>
-        <h2 class="section-title">Technical Mastery &amp; Expertise</h2>
-        <p class="section-subtitle">Proven skills honed across full-stack engineering and intelligent workflow design.
-        </p>
+        <span class="section-badge"><i class="fas fa-trophy"></i> Recognition</span>
+        <h2 class="section-title">Achievements &amp; Standards</h2>
+        <p class="section-subtitle">Proven technical depth and continuous learning.</p>
       </div>
 
       <div class="achievements-grid">
         <div class="achievement-card fade-in-up">
+          <div class="achievement-icon"><i class="fas fa-award"></i></div>
+          <h3 class="achievement-title">B.Tech CSE AI Specialization</h3>
+          <p class="achievement-sub">KL Deemed to be University • 2023–2027</p>
+        </div>
+
+        <div class="achievement-card fade-in-up">
           <div class="achievement-icon"><i class="fas fa-brain"></i></div>
-          <h3 class="achievement-title">AI Projects</h3>
-          <p class="achievement-sub">LLM Agent &amp; Workflow Integration</p>
+          <h3 class="achievement-title">NLP Toxicity Model</h3>
+          <p class="achievement-sub">94%+ Accuracy Classifier Built</p>
         </div>
 
         <div class="achievement-card fade-in-up">
-          <div class="achievement-icon"><i class="fas fa-code"></i></div>
-          <h3 class="achievement-title">Full Stack Dev</h3>
-          <p class="achievement-sub">Clean Architecture &amp; REST APIs</p>
+          <div class="achievement-icon"><i class="fas fa-rocket"></i></div>
+          <h3 class="achievement-title">Founder @ Flowgen</h3>
+          <p class="achievement-sub">Digital &amp; Business Automation Agency</p>
         </div>
 
         <div class="achievement-card fade-in-up">
-          <div class="achievement-icon"><i class="fas fa-lightbulb"></i></div>
-          <h3 class="achievement-title">Problem Solving</h3>
-          <p class="achievement-sub">Business Logic Optimization</p>
-        </div>
-
-        <div class="achievement-card fade-in-up">
-          <div class="achievement-icon"><i class="fas fa-cogs"></i></div>
-          <h3 class="achievement-title">Automation</h3>
-          <p class="achievement-sub">n8n &amp; WhatsApp Integration</p>
-        </div>
-
-        <div class="achievement-card fade-in-up">
-          <div class="achievement-icon"><i class="fas fa-mobile-alt"></i></div>
-          <h3 class="achievement-title">Responsive Design</h3>
-          <p class="achievement-sub">Handcrafted Modern UI/UX</p>
-        </div>
-      </div>
-
-      <!-- PROJECT HIGHLIGHTS / TRUST BANNER -->
-      <div class="trust-section fade-in-up">
-        <div class="trust-content">
-          <div class="trust-quote-icon"><i class="fas fa-quote-left"></i></div>
-          <p class="trust-statement">
-            "These projects demonstrate my technical capabilities and the type of digital solutions I build. I believe
-            in earning trust through quality work and real client results."
-          </p>
-          <div class="trust-author">
-            <img src="images/profile.jpg" alt="Yerra Venkat Praveen" class="trust-avatar">
-            <div>
-              <div class="trust-author-name">Yerra Venkat Praveen</div>
-              <div class="trust-author-role">Full Stack Developer &amp; AI Automation Engineer</div>
-            </div>
-          </div>
+          <div class="achievement-icon"><i class="fas fa-certificate"></i></div>
+          <h3 class="achievement-title">Full Stack Certification</h3>
+          <p class="achievement-sub">Advanced Web Architecture</p>
         </div>
       </div>
     </div>
@@ -841,14 +1101,13 @@
   <section id="contact" class="contact">
     <div class="container">
       <div class="section-header fade-in-up">
-        <span class="section-badge"><i class="fas fa-paper-plane"></i> Get In Touch</span>
-        <h2 class="section-title">Let's Build Something Exceptional</h2>
-        <p class="section-subtitle">Whether you need a custom web platform, dashboard, or AI automation workflow, I'm
-          ready to help.</p>
+        <span class="section-badge"><i class="fas fa-paper-plane"></i> Let's Connect</span>
+        <h2 class="section-title">Have an idea? Let's build it.</h2>
+        <p class="section-subtitle">Whether you're looking for an AI solution, a modern website, business automation or simply want to discuss an opportunity, feel free to reach out.</p>
       </div>
 
       <div class="contact-grid">
-        <!-- Contact Info Cards -->
+        <!-- Contact Information Side -->
         <div class="contact-info fade-in-up">
           <div class="contact-card">
             <div class="contact-icon"><i class="fas fa-envelope"></i></div>
@@ -870,8 +1129,7 @@
             <div class="contact-icon"><i class="fab fa-linkedin-in"></i></div>
             <div class="contact-details">
               <h4>LinkedIn</h4>
-              <p><a href="https://www.linkedin.com/in/yerravenkatpraveen/"
-                  target="_blank">linkedin.com/in/yerravenkatpraveen</a></p>
+              <p><a href="https://www.linkedin.com/in/yerravenkatpraveen/" target="_blank">linkedin.com/in/yerravenkatpraveen</a></p>
             </div>
           </div>
 
@@ -892,7 +1150,7 @@
           </div>
         </div>
 
-        <!-- Contact Form -->
+        <!-- Contact Form Side -->
         <div class="contact-form-container fade-in-up">
           <div class="form-toast"></div>
           <form class="contact-form">
@@ -903,32 +1161,49 @@
 
             <div class="form-group">
               <label class="form-label" for="form-email">Email Address *</label>
-              <input type="email" id="form-email" name="email" class="form-input" placeholder="e.g. sarah@startup.com"
-                required>
+              <input type="email" id="form-email" name="email" class="form-input" placeholder="e.g. sarah@company.com" required>
             </div>
 
             <div class="form-group">
-              <label class="form-label" for="form-subject">Service Required</label>
-              <select id="form-subject" name="subject" class="form-input">
-                <option value="Website Development">Website Development</option>
-                <option value="Dashboard Development">Dashboard Development</option>
-                <option value="Business Automation">Business AI &amp; Automation</option>
-                <option value="Restaurant System">Restaurant OS / Digital Solution</option>
-                <option value="Hospital Management">Hospital System</option>
-                <option value="Custom Software">Custom Software Engineering</option>
+              <label class="form-label" for="form-subject">Project Type *</label>
+              <select id="form-subject" name="subject" class="form-input" required>
+                <option value="AI Project">AI Project</option>
+                <option value="Website">Website Development</option>
+                <option value="Automation">Workflow Automation</option>
+                <option value="WhatsApp Agent">WhatsApp Agent</option>
+                <option value="Business Solution">Flowgen Business Solution</option>
+                <option value="Job Opportunity">Job Opportunity</option>
+                <option value="Other">Other Query</option>
               </select>
             </div>
 
             <div class="form-group">
-              <label class="form-label" for="form-message">Project Details *</label>
-              <textarea id="form-message" name="message" class="form-textarea"
-                placeholder="Tell me about your business goals, project scope, and timeline..." required></textarea>
+              <label class="form-label" for="form-message">Message *</label>
+              <textarea id="form-message" name="message" class="form-textarea" placeholder="Tell me about your business goals, project scope, or opportunity..." required></textarea>
             </div>
 
-            <button type="submit" class="btn btn-primary" style="width: 100%;">
-              <i class="fas fa-paper-plane"></i> Send Message
+            <button type="submit" class="btn btn-primary btn-draw" style="width: 100%;">
+              <span>Send Message <i class="fas fa-paper-plane icon-shift"></i></span>
             </button>
           </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ==================== FINAL CTA BANNER ==================== -->
+  <section class="final-cta-section">
+    <div class="container">
+      <div class="final-cta-card fade-in-up">
+        <h2 class="final-cta-title">Let's build something useful.</h2>
+        <p class="final-cta-sub">Have a project, business idea or placement opportunity? Let's turn it into something real.</p>
+        <div class="final-cta-buttons">
+          <a href="#contact" class="btn btn-primary btn-draw">
+            <span>Start a Conversation <i class="fas fa-arrow-right icon-shift"></i></span>
+          </a>
+          <a href="#projects" class="btn btn-secondary">
+            <span>View My Work</span>
+          </a>
         </div>
       </div>
     </div>
@@ -939,10 +1214,14 @@
     <div class="container">
       <div class="footer-grid">
         <div>
-          <div class="footer-brand">Yerra Venkat Praveen</div>
+          <div class="footer-brand">Venkat Praveen</div>
           <p class="footer-desc">
-            Founder of <strong>FlowGen</strong> | Full Stack Developer &amp; AI Automation Engineer. Building modern web platforms, intelligent dashboards, and autonomous business workflows.
+            AI Engineer • Software Developer • Founder of <strong>Flowgen</strong>.<br>
+            Building intelligent digital experiences that connect AI, software and automation.
           </p>
+          <div class="footer-status-pill">
+            <span class="pulse-blue-dot"></span> Available for opportunities &amp; client projects
+          </div>
         </div>
 
         <div>
@@ -950,9 +1229,11 @@
           <ul class="footer-links">
             <li><a href="#home">Home</a></li>
             <li><a href="#about">About</a></li>
-            <li><a href="#projects">Projects</a></li>
             <li><a href="#skills">Skills</a></li>
             <li><a href="#services">Services</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#flowgen">Flowgen</a></li>
+            <li><a href="#journey">Journey</a></li>
             <li><a href="#contact">Contact</a></li>
           </ul>
         </div>
@@ -960,35 +1241,35 @@
         <div>
           <h4 class="footer-title">Connect</h4>
           <div class="footer-socials">
-            <a href="https://github.com/venkatpraveen06" target="_blank" class="social-icon" aria-label="GitHub"><i
-                class="fab fa-github"></i></a>
-            <a href="https://www.linkedin.com/in/yerravenkatpraveen/" target="_blank" class="social-icon"
-              aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
-            <a href="https://www.instagram.com/vikramadhitya69/" target="_blank" class="social-icon"
-              aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-            <a href="mailto:venkatpraveens2006@gmail.com" class="social-icon" aria-label="Email"><i
-                class="fas fa-envelope"></i></a>
+            <a href="https://github.com/venkatpraveen06" target="_blank" class="social-icon" aria-label="GitHub"><i class="fab fa-github"></i></a>
+            <a href="https://www.linkedin.com/in/yerravenkatpraveen/" target="_blank" class="social-icon" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+            <a href="https://www.instagram.com/vikramadhitya69/" target="_blank" class="social-icon" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="mailto:venkatpraveens2006@gmail.com" class="social-icon" aria-label="Email"><i class="fas fa-envelope"></i></a>
           </div>
         </div>
       </div>
 
       <div class="footer-bottom">
-        <div>&copy; 2026 Venkat Praveen. All rights reserved. Handcrafted with HTML5, CSS3 &amp; Vanilla JavaScript.
-        </div>
-        <div><a href="#home" style="color: #94A3B8;"><i class="fas fa-arrow-up"></i> Back to Top</a></div>
+        <div>&copy; 2026 Venkat Praveen. All rights reserved. Handcrafted with HTML5, CSS3 &amp; Vanilla JavaScript.</div>
+        <div><a href="#home" class="back-to-top-link"><i class="fas fa-arrow-up"></i> Back to Top</a></div>
       </div>
     </div>
   </footer>
+
+  <!-- ==================== FLOATING BACK TO TOP BUTTON ==================== -->
+  <button class="back-to-top-btn" id="backToTop" aria-label="Back to Top">
+    <i class="fas fa-arrow-up"></i>
+  </button>
 
   <!-- ==================== CASE STUDY MODAL OVERLAY ==================== -->
   <div class="modal-overlay">
     <div class="modal-container">
       <div class="modal-header">
-        <h3 class="modal-title">Project Case Study</h3>
+        <h3 class="modal-title">Project Details</h3>
         <button class="modal-close" aria-label="Close modal">&times;</button>
       </div>
       <div class="modal-body">
-        <!-- Content dynamically injected by main.js -->
+        <!-- Dynamic Content injected by main.js -->
       </div>
     </div>
   </div>
