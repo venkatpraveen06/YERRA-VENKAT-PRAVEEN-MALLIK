@@ -1733,7 +1733,7 @@ section {
   background-color: var(--bg-secondary);
   border: 1px solid var(--color-border);
   border-radius: var(--radius-lg);
-  padding: 28px;
+  overflow: hidden;
   box-shadow: var(--shadow-sm);
   transition: all var(--transition-normal);
   display: flex;
@@ -1744,6 +1744,33 @@ section {
   transform: translateY(-6px);
   border-color: var(--color-accent-blue-light);
   box-shadow: var(--shadow-hover);
+}
+
+.blog-card-img-wrapper {
+  width: 100%;
+  height: 180px;
+  background-color: var(--surface-soft);
+  overflow: hidden;
+  position: relative;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.blog-card-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.blog-card:hover .blog-card-img {
+  transform: scale(1.06);
+}
+
+.blog-card-content {
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
 }
 
 .blog-meta {
@@ -1791,10 +1818,27 @@ section {
   align-items: center;
   gap: 6px;
   transition: gap 0.2s ease;
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  outline: none;
+  font-family: inherit;
 }
 
 .blog-card:hover .blog-link {
   gap: 10px;
+}
+
+/* Modal Article Banner Image */
+.modal-article-banner {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+  border-radius: var(--radius-md);
+  margin-bottom: 20px;
+  border: 1px solid var(--color-border);
+  box-shadow: var(--shadow-sm);
 }
 
 /* ==================== 18. BRAND STATEMENT & ACHIEVEMENTS ==================== */

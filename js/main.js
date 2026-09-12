@@ -1,6 +1,6 @@
 /**
  * VENKAT PRAVEEN PORTFOLIO - VANILLA JAVASCRIPT SYSTEM 2026
- * Handcrafted for high performance, interactive case studies, custom cursor, and smooth animations.
+ * Handcrafted for high performance, interactive case studies, article popups, custom cursor, and smooth animations.
  */
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -11,6 +11,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initMobileMenu();
   initIntersectionObserver();
   initCaseStudyModal();
+  initArticleModal();
   initContactForm();
   initSmoothScroll();
   initCodeTypingAnimation();
@@ -360,7 +361,227 @@ function renderModalContent(data) {
   `;
 }
 
-/* 8. Contact Form Handling & Toast Feedback */
+/* 8. TechPlus Articles Data & Interactive Article Reader Modal */
+const articlesData = {
+  article_1: {
+    title: 'Building AI Applications with Python',
+    badge: 'TechPlus Article • AI Engineering',
+    readTime: '6 min read',
+    author: 'Venkat Praveen',
+    role: 'Founder @ Flowgen',
+    date: 'September 2026',
+    img: 'images/article_ai_python.svg',
+    overview: 'Modern AI applications require more than just passing prompts to an API. Building production-grade AI systems requires asynchronous model inference, vector database RAG architectures, and multi-tier fallback safety guards.',
+    sections: [
+      {
+        heading: '1. Asynchronous Model Inference with FastAPI',
+        text: 'Synchronous blocking calls to large language models or NLP transformers can bring web servers to a crawl. By leveraging FastAPI’s async endpoints and background task queues, long-running model evaluations execute cleanly without blocking incoming HTTP connections.'
+      },
+      {
+        heading: '2. Vector Database Caching & Retrieval',
+        text: 'Re-evaluating identical semantic queries on LLM endpoints adds unnecessary latency and cloud costs. Implementing vector similarity search with embeddings allows retrieving pre-computed responses for semantically equivalent user inputs in under 20ms.'
+      },
+      {
+        heading: '3. Production Fallbacks & Guardrails',
+        text: 'Inference pipelines should never fail silently. Implementing strict response validation schemas, output token limits, and secondary fallback models ensures 99.9% application uptime.'
+      }
+    ],
+    takeaways: [
+      'Isolate AI model processing from primary HTTP worker loops',
+      'Leverage vector search caching for sub-50ms intent retrieval',
+      'Enforce strict input/output schemas for zero-trust data safety'
+    ]
+  },
+  article_2: {
+    title: 'How WhatsApp Automation Can Transform Small Businesses',
+    badge: 'TechPlus Article • Business Automation',
+    readTime: '5 min read',
+    author: 'Venkat Praveen',
+    role: 'Founder @ Flowgen',
+    date: 'August 2026',
+    img: 'images/article_whatsapp_automation.svg',
+    overview: 'Local businesses lose up to 60% of potential customer leads due to delayed manual replies outside standard office hours. WhatsApp automation changes the game by responding instantly 24/7.',
+    sections: [
+      {
+        heading: '1. The 5-Minute Lead Conversion Rule',
+        text: 'Studies show that contacting an inbound lead within 5 minutes increases conversion probability by 391%. Automated WhatsApp webhook triggers ensure every customer inquiry receives a helpful reply in under 5 seconds.'
+      },
+      {
+        heading: '2. Autonomous n8n Lead Qualification Workflows',
+        text: 'Instead of spending manual staff hours collecting basic details, n8n workflows ask qualifying questions (budget, project type, timeline) and sync structured answers directly into Supabase CRM.'
+      },
+      {
+        heading: '3. Seamless Human Agent Handoff',
+        text: 'When a lead indicates high intent or requests a phone call, the automated bot immediately notifies staff via real-time alerts for live agent intervention.'
+      }
+    ],
+    takeaways: [
+      'Sub-5s WhatsApp responses capture buyer intent instantly',
+      'Automated qualification saves 15+ hours of weekly manual work',
+      'Direct Supabase CRM syncing eliminates lost customer records'
+    ]
+  },
+  article_3: {
+    title: 'Understanding NLP in Real-World Applications',
+    badge: 'TechPlus Article • Natural Language Processing',
+    readTime: '8 min read',
+    author: 'Venkat Praveen',
+    role: 'Founder @ Flowgen',
+    date: 'August 2026',
+    img: 'images/article_nlp_apps.svg',
+    overview: 'Natural Language Processing powers modern moderation, intent detection, and content recommendation engines. Here is an inside look at fine-tuning NLP transformer models on noisy social text.',
+    sections: [
+      {
+        heading: '1. Preprocessing Noisy Social Media Text',
+        text: 'Real-world social media text is filled with intentional typos, slang, code-mixing, and emojis. Subword tokenization (Byte-Pair Encoding) allows transformer models to process unseen vocabulary without falling back to unknown token errors.'
+      },
+      {
+        heading: '2. Multi-Class PyTorch Classification Heads',
+        text: 'Standard binary classifiers miss nuance. By engineering multi-label classification heads on top of Hugging Face transformers, a single inference pass can score toxicity, severe toxicity, insults, and identity attacks simultaneously.'
+      },
+      {
+        heading: '3. Threshold Optimization for Low False Positives',
+        text: 'In production content moderation, false positives frustrate users while false negatives undermine safety. Precision-recall threshold tuning balances detection accuracy with user experience.'
+      }
+    ],
+    takeaways: [
+      'Subword tokenizers handle informal internet slang gracefully',
+      'Multi-label heads evaluate multiple abuse dimensions in 1 pass',
+      'PR curve thresholding prevents aggressive false positive flags'
+    ]
+  },
+  article_4: {
+    title: 'From Student Developer to AI Engineer',
+    badge: 'TechPlus Article • Career & Engineering',
+    readTime: '7 min read',
+    author: 'Venkat Praveen',
+    role: 'Founder @ Flowgen',
+    date: 'July 2026',
+    img: 'images/article_student_to_ai.svg',
+    overview: 'Transitioning from academic computer science projects to production AI engineering requires shifting from script writing to building resilient, scalable software systems.',
+    sections: [
+      {
+        heading: '1. Beyond Code: System Architecture & Reliability',
+        text: 'Academic projects evaluate code by correctness on test cases. Production engineering evaluates systems by reliability under load, database normalization, Docker containerization, and zero downtime.'
+      },
+      {
+        heading: '2. Building Real-World Systems that Solve Problems',
+        text: 'Instead of building generic tutorial apps, focus on building end-to-end products that address operational friction—such as hostel matrices, gaming tournament brackets, or automated lead capture.'
+      },
+      {
+        heading: '3. The Entrepreneurial Advantage',
+        text: 'Founding Flowgen forced a key perspective shift: code is a tool to create business value. Understanding client goals makes you a significantly better engineer.'
+      }
+    ],
+    takeaways: [
+      'Prioritize modular design, API docs, and Docker containerization',
+      'Build end-to-end software solving concrete operational bottlenecks',
+      'Focus on business impact and client outcome over theoretical code'
+    ]
+  },
+  article_5: {
+    title: 'How Businesses Can Automate Lead Follow-Ups',
+    badge: 'TechPlus Article • Lead Generation & CRM',
+    readTime: '5 min read',
+    author: 'Venkat Praveen',
+    role: 'Founder @ Flowgen',
+    date: 'June 2026',
+    img: 'images/article_lead_automation.svg',
+    overview: 'Single contact attempts result in lost revenue. Implementing automated 24/7 follow-up sequences transforms cold website visitors into warm business clients.',
+    sections: [
+      {
+        heading: '1. Multi-Channel Follow-Up Architecture',
+        text: 'Relying solely on email follow-ups yields a low 15% open rate. Combining automated WhatsApp messages with email reminders increases client engagement to over 85%.'
+      },
+      {
+        heading: '2. Dynamic Lead Scoring & Intent Tagging',
+        text: 'Webhooks trigger n8n workflows that calculate a lead score based on project type, timeline urgency, and budget, prioritizing high-value prospects for priority outreach.'
+      },
+      {
+        heading: '3. Automated Reminder Triggers',
+        text: 'Scheduled background triggers automatically send polite follow-ups at 24 hours, 48 hours, and 5 days, ensuring no prospect falls through the cracks.'
+      }
+    ],
+    takeaways: [
+      'Multi-channel WhatsApp + Email follow-ups achieve 85%+ open rates',
+      'n8n lead scoring prioritizes high-budget client inquiries',
+      'Automated drip sequences guarantee 100% follow-up execution'
+    ]
+  }
+};
+
+function initArticleModal() {
+  const modalOverlay = document.querySelector('.modal-overlay');
+  const articleBtns = document.querySelectorAll('.btn-read-article');
+
+  if (!modalOverlay || !articleBtns.length) return;
+
+  articleBtns.forEach(btn => {
+    btn.addEventListener('click', (e) => {
+      e.preventDefault();
+      const articleId = btn.getAttribute('data-article');
+      const article = articlesData[articleId];
+
+      if (article) {
+        renderArticleModalContent(article);
+        modalOverlay.classList.add('active');
+        document.body.style.overflow = 'hidden';
+      }
+    });
+  });
+}
+
+function renderArticleModalContent(article) {
+  const modalTitle = document.querySelector('.modal-title');
+  const modalBody = document.querySelector('.modal-body');
+
+  modalTitle.textContent = article.title;
+
+  const sectionsHtml = article.sections.map(s => `
+    <div style="margin-bottom: 20px;">
+      <h4 class="modal-section-title" style="color: var(--color-text); font-size: 1.05rem; margin-bottom: 8px;">${s.heading}</h4>
+      <p class="modal-text" style="color: var(--color-text-muted); line-height: 1.65; font-size: 0.93rem;">${s.text}</p>
+    </div>
+  `).join('');
+
+  const takeawaysHtml = article.takeaways.map(t => `
+    <li style="display: flex; align-items: flex-start; gap: 10px; font-size: 0.9rem; color: var(--color-text); font-weight: 600;">
+      <i class="fas fa-check-circle" style="color: var(--color-accent-blue); margin-top: 3px;"></i>
+      <span>${t}</span>
+    </li>
+  `).join('');
+
+  modalBody.innerHTML = `
+    <img src="${article.img}" alt="${article.title}" class="modal-article-banner">
+
+    <div style="display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 10px; margin-bottom: 14px;">
+      <span class="project-category-badge" style="font-size: 0.8rem;">${article.badge}</span>
+      <span style="font-size: 0.82rem; font-weight: 700; color: var(--color-text-muted);"><i class="far fa-clock" style="margin-right: 4px;"></i> ${article.readTime}</span>
+    </div>
+
+    <div style="font-size: 0.85rem; font-weight: 700; color: var(--color-accent-blue-dark); margin-bottom: 20px; padding-bottom: 12px; border-bottom: 1px solid var(--color-border); display: flex; align-items: center; justify-content: space-between;">
+      <span><i class="fas fa-user-edit" style="color: var(--color-accent-blue); margin-right: 6px;"></i> By <strong>${article.author}</strong> (${article.role})</span>
+      <span style="color: var(--color-text-muted); font-weight: 600;">${article.date}</span>
+    </div>
+
+    <div style="background-color: rgba(37, 99, 235, 0.06); border-left: 4px solid var(--color-accent-blue); padding: 18px; border-radius: var(--radius-sm); margin-bottom: 24px;">
+      <p style="font-size: 0.96rem; font-weight: 600; color: var(--color-text); line-height: 1.65; margin: 0; font-style: italic;">
+        "${article.overview}"
+      </p>
+    </div>
+
+    ${sectionsHtml}
+
+    <div style="background-color: var(--surface-soft); border: 1px solid var(--color-border); border-radius: var(--radius-md); padding: 20px; margin-top: 28px;">
+      <h4 class="modal-section-title" style="margin-top: 0; font-size: 1rem; margin-bottom: 14px;"><i class="fas fa-lightbulb" style="color: var(--color-accent-blue); margin-right: 8px;"></i> Key Engineering Takeaways</h4>
+      <ul style="list-style: none; display: flex; flex-direction: column; gap: 10px; margin: 0; padding: 0;">
+        ${takeawaysHtml}
+      </ul>
+    </div>
+  `;
+}
+
+/* 9. Contact Form Handling & Toast Feedback */
 function initContactForm() {
   const form = document.querySelector('.contact-form');
   const toast = document.querySelector('.form-toast');
@@ -390,7 +611,7 @@ function initContactForm() {
   });
 }
 
-/* 9. Smooth Scroll for Links */
+/* 10. Smooth Scroll for Links */
 function initSmoothScroll() {
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function(e) {
@@ -409,7 +630,7 @@ function initSmoothScroll() {
   });
 }
 
-/* 10. Code Editor Typing Letter Animation */
+/* 11. Code Editor Typing Letter Animation */
 function initCodeTypingAnimation() {
   const codeContainer = document.querySelector('.code-lines');
   if (!codeContainer) return;
@@ -564,7 +785,7 @@ function initCodeTypingAnimation() {
   step();
 }
 
-/* 11. Hero Title Typewriter ("Hi, I'm Venkat Praveen") */
+/* 12. Hero Title Typewriter ("Hi, I'm Venkat Praveen") */
 function initHeroTitleTypingAnimation() {
   const greetingEl = document.querySelector('.hero-greeting-text');
   const nameEl = document.querySelector('.hero-name-text');
@@ -600,7 +821,7 @@ function initHeroTitleTypingAnimation() {
   typeGreeting();
 }
 
-/* 12. Flowgen Diagram Interactive Step Highlight */
+/* 13. Flowgen Diagram Interactive Step Highlight */
 function initFlowgenDiagram() {
   const nodes = document.querySelectorAll('.diagram-node');
   if (!nodes.length) return;
@@ -613,7 +834,7 @@ function initFlowgenDiagram() {
   }, 1800);
 }
 
-/* 13. Timeline Progress Line Animation */
+/* 14. Timeline Progress Line Animation */
 function initTimelineProgress() {
   const timelineSection = document.querySelector('.journey-section');
   const line = document.getElementById('timelineLine');
@@ -639,7 +860,7 @@ function initTimelineProgress() {
   });
 }
 
-/* 14. Floating Back to Top Button */
+/* 15. Floating Back to Top Button */
 function initBackToTop() {
   const btn = document.getElementById('backToTop');
   if (!btn) return;
